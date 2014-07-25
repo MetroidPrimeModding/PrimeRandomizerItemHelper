@@ -2,6 +2,16 @@
 <html ng-app="helper">
 <head lang="en">
   <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53207226-1', 'auto');
+    ga('send', 'pageview');
+  </script>
   <script type="text/javascript" src="../libs/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../libs/angular.min.js"></script>
   <script type="text/javascript" src="../libs/ui-bootstrap-tpls-0.11.0.min.js"></script>
@@ -16,7 +26,7 @@
     <h1>Prime 1 Randomizer Item Location Tracker</h1>
   </div>
   <div class="col-md-6">
-    <h2>Item Locations</h2>
+    <h2>Item Locations <span class="items-rem-count">{{locationFoundCount() || 0}}/{{locationTotalCount()}} ({{locationRemCount()}} left)</span></h2>
     <input type="text" ng-model="locationSearch" class="form-control" placeholder="Search..."/>
     <ul class="list-group">
       <li class="list-group-item" ng-repeat="location in locations" ng-show="([location] | filter:locationSearch).length">
@@ -33,7 +43,7 @@
     </ul>
   </div>
   <div class="col-md-6">
-    <h2>Items</h2>
+    <h2>Items <span class="items-rem-count">{{itemFoundCount() || 0}}/{{itemTotalCount()}} ({{itemRemCount()}} left)</span></h2>
     <input type="text" ng-model="itemSearch" class="form-control" placeholder="Search..."/>
     <ul class="list-group">
       <li class="list-group-item" ng-repeat="(item, val) in items"

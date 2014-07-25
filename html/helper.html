@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="helper">
+<head lang="en">
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="../libs/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../libs/angular.min.js"></script>
+  <script type="text/javascript" src="../libs/ui-bootstrap-tpls-0.11.0.min.js"></script>
+  <script type="text/javascript" src="../js/helper.js"></script>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/helper.css"/>
+  <title>Prime 1 Item Location Tracker</title>
+</head>
+<body ng-controller="PageController">
+<div class="container">
+  <div class="col-md-12">
+    <h1>Prime 1 Randomizer Item Location Tracker</h1>
+  </div>
+  <div class="col-md-6">
+    <h2>Item Locations</h2>
+    <input type="text" ng-model="locationSearch" class="form-control" placeholder="Search..."/>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="location in locations" ng-show="([location] | filter:locationSearch).length">
+        <div>
+          <h4 class="item-location">{{location.location}}</h4>
+          {{location.area}}
+          <span class="item-original">{{location.item}}</span>
+        </div>
+        <div>
+          <input class="form-control" type="text" ng-model="location.actualItem"
+                 typeahead="i for i in itemsRemaining() | filter:$viewValue | limitTo:8"/>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h2>Items</h2>
+    <input type="text" ng-model="itemSearch" class="form-control" placeholder="Search..."/>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="(item, val) in items"
+          ng-class="{'done': val.found >= val.count}" ng-show="([item] | filter:itemSearch).length">
+        <div>
+          <span class="item-name">{{item}}</span>
+          <span class="item-count">{{val.found || 0}}/{{val.count}}</span>
+        </div>
+        <div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

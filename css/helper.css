@@ -1,0 +1,37 @@
+.item-location {
+
+}
+
+.item-area {
+
+}
+
+.item-original {
+  color: #ddd;
+  text-align: right;
+  margin-left: 1em;
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.item-count {
+  color: red;
+  margin-left: 1em;
+}
+
+.done .item-count {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.done .item-name {
+  text-decoration: line-through;
+  color: gray;
+}
+
+ul {
+  margin-top: 1em;
+}

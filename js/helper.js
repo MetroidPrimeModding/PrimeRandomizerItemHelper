@@ -69,7 +69,7 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
       return true
     } else if ($scope.locationShow === 'found' && loc.actualItem && loc.actualItem !== '') {
       return true;
-    } else if ($scope.locationShow === 'remaining' && (loc.actualItem === undefined || loc.actualItem === '')) {
+    } else if ($scope.locationShow === 'remaining' && (loc.obtained === undefined || loc.obtained === false)) {
       return true;
     }
     return false;

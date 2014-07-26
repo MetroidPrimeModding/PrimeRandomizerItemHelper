@@ -48,4 +48,6 @@ ul {
 
 .items-rem-count {
   color: gray;
+  font-size: 70%;
+  /*margin-left: 1em;*/
 }

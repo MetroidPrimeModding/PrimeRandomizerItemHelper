@@ -36,7 +36,7 @@
   <div class="col-md-6">
     <h2>Item Locations
       <span
-          class="items-rem-count">{{itemFoundCount}}/{{itemTotalCount}} ({{itemTotalCount - itemFoundCount}} left)</span>
+          class="items-rem-count">{{itemFoundCount}} visited {{itemTotalCount}} total</span>
     </h2>
 
     <div class="input-group">
@@ -68,7 +68,9 @@
     </ul>
   </div>
   <div class="col-md-6">
-    <h2>Items</h2>
+    <h2>
+      Items <span class="items-rem-count">{{itemFoundCount}} found {{itemObtainedCount}} obtained {{itemTotalCount}} total</span>
+    </h2>
     <div class="input-group">
       <div class="input-group-btn">
         <label class="btn btn-default" ng-model="itemShow" btn-radio="'all'">All</label>

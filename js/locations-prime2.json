@@ -1,0 +1,577 @@
+[
+  {
+    "area": "Temple Grounds",
+    "location": "Hive Chamber A",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Hall of Honored Dead",
+    "item": "Seeker Launcher"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Hive Chamber B",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "War Ritual Grounds",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Windchamber Gateway",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Transport to Agon Wastes",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Temple Assembly Site",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Grand Windchamber",
+    "item": "Sunburst"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Dynamo Chamber",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Storage Cavern B",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Plain of Dark Worship",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Defiled Shrine",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Communication Area",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "GFMC Compound (Main)",
+    "item": "Missile Launcher"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "GFMC Compound (Secondary)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Accursed Lake",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Fortress Transport Access",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Profane Path",
+    "item": "Beam Ammo Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Phazon Grounds",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Temple Grounds",
+    "location": "Ing Reliquary",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Great Temple",
+    "location": "Transport A Access",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Great Temple",
+    "location": "Temple Sanctuary",
+    "item": "Small glowy sphere"
+  },
+  {
+    "area": "Great Temple",
+    "location": "Transport B Access",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Great Temple",
+    "location": "Main Energy Controller",
+    "item": "Light Suit"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Mining Plaza",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Mining Station Access",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Mining Station B",
+    "item": "Darkburst"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Transport Center",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Mining Station A",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Ing Cache 4",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Junction Site",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Storage A",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Mine Shaft",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Crossroads",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Sand Cache",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Portal Access A",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Judgment Pit",
+    "item": "Space Jump"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Agon Temple",
+    "item": "Bombs"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Trial Tunnel",
+    "item": "Agon Key"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Central Mining Station",
+    "item": "Beam Ammo Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Warrior's Walk",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Sandcanyon",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Dark Agon Temple",
+    "item": "Dark Suit"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Battleground (Main)",
+    "item": "Agon Key"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Battleground (Secondary)",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Ventilation Area A",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Command Center",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Main Reactor",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Doomed Entry",
+    "item": "Agon Key"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Sand Processing",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Storage D",
+    "item": "Dark Beam"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Dark Oasis",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Storage B",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Feeding Pit",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Bioenergy Production",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Ing Cache 1",
+    "item": "Light Beam"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Storage C",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Agon Wastes",
+    "location": "Ing Cache 2",
+    "item": "Sonic Boom"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Torvus Lagoon",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Portal Chamber",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Path of Roots",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Forgotten Bridge",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Great Bridge",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Cache A",
+    "item": "Beam Ammo Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Plaza Access",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Abandoned Worksite",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Poisoned Bog",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Venemous Pond",
+    "item": "Torvus Key 3"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Temple Access",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Torvus Plaza",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Putrid Alcove",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Torvus Grove",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Torvus Temple",
+    "item": "Super Missile"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Dark Torvus Arena (Main)",
+    "item": "Boost Ball"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Dark Torvus Arena (Secondary)",
+    "item": "Torvus Key 1"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Underground Tunnel",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Meditation Vista",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Dark Torvus Temple",
+    "item": "Dark Visor"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Cache B",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Hydrodynamo Station",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Undertemple Access",
+    "item": "Torvus Key 2"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Gathering Hall",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Training Chamber",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Sacrificial Chamber",
+    "item": "Grapple Beam"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Undertemple (Secondary)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Undertemple (Main)",
+    "item": "Main Power Bomb"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Transit Tunnel South",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Transit Tunnel East",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Dungeon",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Hydrochamber Storage",
+    "item": "Gravity Boost"
+  },
+  {
+    "area": "Torvus Bog",
+    "location": "Undertransit One",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Sanctuary Entrance",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Reactor Core",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Transit Station",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Sanctuary Map Station",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Hall of Combat Mastery",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Main Research",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Culling Chamber",
+    "item": "Sanctuary Key"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Central Area Transport West",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Dynamo Works (Main)",
+    "item": "Spider Ball"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Dynamo Works (Secondary)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Hazing Cliff",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Watch Station",
+    "item": "Beam Ammo Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Hive Dynamo Works",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Sentinel's Path",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Watch Station Access",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Aerial Training Site (Main)",
+    "item": "Sanctuary Key"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Aerial Training Site (Secondary)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Main Gyro Chamber",
+    "item": "Power Bomb Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Vault",
+    "item": "Screw Attack"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Temple Access",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Hive Gyro Chamber",
+    "item": "Sanctuary Key"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Hive Temple",
+    "item": "Annihilator Beam"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Hive Entrance",
+    "item": "Sky Temple Key"
+  },
+  {
+    "area": "Sanctuary Fortress",
+    "location": "Aerie",
+    "item": "Echo Visor"
+  }
+]

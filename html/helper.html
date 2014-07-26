@@ -18,13 +18,14 @@
   <script type="text/javascript" src="../js/helper.js"></script>
   <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
   <link type="text/css" rel="stylesheet" href="../css/helper.css"/>
-  <title>Prime 1 Item Location Tracker</title>
+  <title>Prime Randomizer Item Location Tracker</title>
 </head>
 <body ng-controller="PageController">
 <div class="container">
   <div class="col-md-12">
-    <h1 class="text-center">Prime 1 Randomizer Item Location Tracker</h1>
-    <button type="button" class="btn btn-danger btn-lg col-xs-6 col-xs-offset-3" ng-click="reset()">Reset</button>
+    <h1 class="text-center">Prime Randomizer Item Location Tracker</h1>
+    <button type="button" class="btn btn-danger btn-lg col-xs-3 col-xs-offset-2" ng-click="reset(1)">Reset (Prime 1)</button>
+    <button type="button" class="btn btn-danger btn-lg col-xs-3 col-xs-offset-2" ng-click="reset(2)">Reset (Prime 2)</button>
     <p class="text-center col-xs-12">
       <small class="bug-text">
         Feature requests and bugs go here:

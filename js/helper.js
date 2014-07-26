@@ -5,15 +5,23 @@
 var helperApp = angular.module('helper', ['ui.bootstrap']);
 
 var pageController = helperApp.controller('PageController', ['$scope', '$http', function ($scope, $http) {
+  $scope.mode = 1;
+
   function updateItems() {
     console.log("Updating items");
-    angular.forEach($scope.items, function (value, key) {
-      value.found = 0;
-      value.obtained = 0;
-    });
+    $scope.items = {};
+
     var itemsTotal = 0;
     var itemsFound = 0;
     var itemsObtained = 0;
+    angular.forEach($scope.locations, function (value, key) {
+      $scope.items[value.item] = $scope.items[value.item] || {
+        count: 0,
+        found: 0,
+        obtained: 0
+      };
+      $scope.items[value.item].count++;
+    });
     angular.forEach($scope.locations, function (value, key) {
       itemsTotal++;
       var itemFound = value.actualItem;
@@ -26,6 +34,7 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
         }
       }
     });
+
     $scope.itemFoundCount = itemsFound;
     $scope.itemObtainedCount = itemsObtained;
     $scope.itemTotalCount = itemsTotal;
@@ -88,15 +97,24 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
   };
 
   function resetImpl() {
-    $http.get('../js/locations.json').success(function (data) {
-      $scope.locations = data;
-      updateItems();
-    });
+    if ($scope.mode === 1) {
+      $http.get('../js/locations.json').success(function (data) {
+        $scope.locations = data;
+        updateItems();
+      });
+    } else if ($scope.mode === 2) {
+      $http.get('../js/locations-prime2.json').success(function (data) {
+        $scope.locations = data;
+        updateItems();
+      });
+    }
+
   }
 
-  $scope.reset = function () {
+  $scope.reset = function (prime) {
     var reallyDo = confirm('Are you sure you want to reset? This cannot be undone!');
     if (reallyDo) {
+      $scope.mode = prime;
       resetImpl();
     }
   };
@@ -108,8 +126,4 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     resetImpl();
   }
 
-  $http.get('../js/items.json').success(function (data) {
-    $scope.items = data;
-    updateItems();
-  });
 }]);

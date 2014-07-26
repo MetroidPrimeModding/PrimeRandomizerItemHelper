@@ -20,15 +20,25 @@
 .item-count {
   color: red;
   margin-left: 1em;
+  margin-right: 0.5em;
 }
 
-.done .item-count {
+.done .item-count, .done.item-count {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.done .item-count-label, .done.item-count-label {
   color: gray;
   text-decoration: line-through;
 }
 
 .done .item-name {
   text-decoration: line-through;
+  color: gray;
+}
+
+.bug-text {
   color: gray;
 }
 

@@ -23,23 +23,43 @@
 <body ng-controller="PageController">
 <div class="container">
   <div class="col-md-12">
-    <h1>Prime 1 Randomizer Item Location Tracker</h1>
-    <p>
-      Feature requests and bugs go here:
-      <a href="https://github.com/Pwootage/PrimeRandomizerItemHelper/issues">https://github.com/Pwootage/PrimeRandomizerItemHelper/issues</a>
+    <h1 class="text-center">Prime 1 Randomizer Item Location Tracker</h1>
+    <button type="button" class="btn btn-danger btn-lg col-xs-6 col-xs-offset-3" ng-click="reset()">Reset</button>
+    <p class="text-center col-xs-12">
+      <small class="bug-text">
+        Feature requests and bugs go here:
+        <a href="https://github.com/Pwootage/PrimeRandomizerItemHelper/issues">https://github.com/Pwootage/PrimeRandomizerItemHelper/issues</a>
+      </small>
     </p>
   </div>
   <div class="col-md-6">
-    <h2>Item Locations <span class="items-rem-count">{{locationFoundCount() || 0}}/{{locationTotalCount()}} ({{locationRemCount()}} left)</span></h2>
-    <input type="text" ng-model="locationSearch" class="form-control" placeholder="Search..."/>
+    <h2>Item Locations
+      <span
+          class="items-rem-count">{{itemFoundCount}}/{{itemTotalCount}} ({{itemTotalCount - itemFoundCount}} left)</span>
+    </h2>
+
+    <div class="input-group">
+      <div class="input-group-btn">
+        <label class="btn btn-default" ng-model="locationShow" btn-radio="'all'">All</label>
+        <label class="btn btn-default" ng-model="locationShow" btn-radio="'found'">Found</label>
+        <label class="btn btn-default" ng-model="locationShow" btn-radio="'remaining'">Remaining</label>
+      </div>
+      <input type="text" ng-model="locationSearch" class="form-control" placeholder="Search..."/>
+    </div>
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="location in locations" ng-show="([location] | filter:locationSearch).length">
+      <li class="list-group-item" ng-repeat="location in locations"
+          ng-show="([location] | filter:locationSearch).length && shouldShowLocation(location)">
         <div>
           <h4 class="item-location">{{location.location}}</h4>
           {{location.area}}
           <span class="item-original">{{location.item}}</span>
         </div>
-        <div>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <label class="btn btn-default" ng-model="location.obtained" btn-checkbox>
+              {{buttonText(location.obtained)}}
+            </label>
+          </span>
           <input class="form-control" type="text" ng-model="location.actualItem"
                  typeahead="i for i in itemsRemaining() | filter:$viewValue | limitTo:8"/>
         </div>
@@ -47,14 +67,33 @@
     </ul>
   </div>
   <div class="col-md-6">
-    <h2>Items <span class="items-rem-count">{{itemFoundCount() || 0}}/{{itemTotalCount()}} ({{itemRemCount()}} left)</span></h2>
-    <input type="text" ng-model="itemSearch" class="form-control" placeholder="Search..."/>
+    <h2>Items</h2>
+    <div class="input-group">
+      <div class="input-group-btn">
+        <label class="btn btn-default" ng-model="itemShow" btn-radio="'all'">All</label>
+        <label class="btn btn-default" ng-model="itemShow" btn-radio="'found'">Found</label>
+        <label class="btn btn-default" ng-model="itemShow" btn-radio="'remaining'">Remaining</label>
+      </div>
+      <input type="text" ng-model="itemSearch" class="form-control" placeholder="Search..."/>
+    </div>
     <ul class="list-group">
       <li class="list-group-item" ng-repeat="(item, val) in items"
-          ng-class="{'done': val.found >= val.count}" ng-show="([item] | filter:itemSearch).length">
-        <div>
-          <span class="item-name">{{item}}</span>
-          <span class="item-count">{{val.found || 0}}/{{val.count}}</span>
+          ng-class="{'done': val.found >= val.count && val.obtained >= val.count}"
+          ng-show="([item] | filter:itemSearch).length && shouldShowItem(val)">
+        <div class="row">
+          <div class="col-xs-6">
+            <span class="item-name">{{item}}</span>
+          </div>
+          <div class="col-xs-3">
+            <span class="item-count"
+                  ng-class="{'done': val.found >= val.count}">{{val.found || 0}}/{{val.count}}</span>
+            <span class="item-count-label" ng-class="{'done': val.found >= val.count}">found</span>
+          </div>
+          <div class="col-xs-3">
+            <span class="item-count"
+                  ng-class="{'done': val.obtained >= val.count}">{{val.obtained || 0}}/{{val.count}}</span>
+            <span class="item-count-label" ng-class="{'done': val.obtained >= val.count}">obtained</span>
+          </div>
         </div>
         <div>
         </div>

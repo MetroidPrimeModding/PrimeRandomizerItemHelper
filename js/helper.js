@@ -4,7 +4,7 @@
 
 var helperApp = angular.module('helper', ['ui.bootstrap']);
 
-var pageController = helperApp.controller('PageController', ['$scope', '$http', function ($scope, $http) {
+var pageController = helperApp.controller('PageController', ['$scope', '$http', '$modal', function ($scope, $http, $modal) {
   $scope.mode = 1;
 
   function updateItems() {
@@ -25,9 +25,11 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     angular.forEach($scope.locations, function (value, key) {
       itemsTotal++;
       var itemFound = value.actualItem;
-      if (itemFound && $scope.items[itemFound]) {
-        itemsFound++;
-        $scope.items[itemFound].found++;
+      if ($scope.items[itemFound] && itemFound) {
+        if (value.found) {
+          itemsFound++;
+          $scope.items[itemFound].found++;
+        }
         if (value.obtained) {
           itemsObtained++;
           $scope.items[itemFound].obtained++;
@@ -39,6 +41,8 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     $scope.itemObtainedCount = itemsObtained;
     $scope.itemTotalCount = itemsTotal;
   }
+
+  $scope.loadBlankDropdown = false;
 
   $scope.locations = [];
   $scope.$watch('locations', function (newVal, oldVal) {
@@ -64,12 +68,11 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
   $scope.itemObtainedCount = 0;
   $scope.itemTotalCount = 0;
 
-  $scope.buttonText = function (obtained) {
-    if (obtained) {
-      return 'Obtained';
-    } else {
-      return 'Found';
+  $scope.fixObtained = function (location) {
+    if (!location.found) {
+      return false;
     }
+    return location.obtained;
   };
 
   $scope.locationShow = 'all';
@@ -84,6 +87,17 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     return false;
   };
 
+  $scope.locationSearchImpl = function(searchTerm) {
+    return function(location) {
+      if (searchTerm === undefined || searchTerm.trim().length === 0) return true;
+      if (location.area.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) return true;
+      if (location.location.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) return true;
+      if (location.item.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) return true;
+      if (location.found && location.actualItem.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) return true;
+      return false;
+    };
+  };
+
   $scope.itemShow = 'all';
   $scope.shouldShowItem = function (item) {
     if ($scope.itemShow === 'all') {
@@ -96,22 +110,62 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     return false;
   };
 
-  function resetImpl() {
+  function resetImpl(cb) {
     if ($scope.mode === 1) {
       $http.get('../js/locations.json').success(function (data) {
         $scope.locations = data;
+        if (cb) {
+          cb(data);
+        }
         updateItems();
       });
     } else if ($scope.mode === 2) {
       $http.get('../js/locations-prime2.json').success(function (data) {
         $scope.locations = data;
+        if (cb) {
+          cb(data);
+        }
         updateItems();
       });
     }
 
   }
 
+  function setDataFromParser(data) {
+    if (data.itemList.length == 100) {
+      $scope.mode = 1;
+    } else if (data.itemList.length == 115) {
+      $scope.mode = 2;
+    } else {
+      alert('Wrong number of items in that list, not sure what it is... (' + data.itemList.length + ')');
+    }
+    resetImpl(function () {
+      var loaded = 0;
+      var tempList = angular.copy(data.itemList);
+      angular.forEach($scope.locations, function (value, key) {
+        for (var i = 0; i < tempList.length; i++) {
+          var matches = 0;
+          if (value.area === tempList[i].area) matches++;
+          if (value.location === tempList[i].location) matches++;
+          if (value.item === tempList[i].originalItem) matches++;
+          if (matches >= 3) {
+            loaded++;
+            $scope.locations[key].actualItem = tempList[i].item;
+            tempList.splice(i, 1);
+            break;
+          }
+        }
+      });
+      if (loaded === 100 || loaded === 115) {
+        alert('Loaded ' + loaded + ' items!');
+      } else {
+        alert('Loaded ' + loaded + ' items: If this is unexpected, please submit this log as a bug report so I can figure out what\'s wrong!');
+      }
+    });
+  }
+
   $scope.reset = function (prime) {
+    $scope.loadBlankDropdown = false;
     var reallyDo = confirm('Are you sure you want to reset? This cannot be undone!');
     if (reallyDo) {
       $scope.mode = prime;
@@ -126,4 +180,64 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     resetImpl();
   }
 
+  $scope.loadLogFile = function () {
+    var modal = $modal.open({
+      controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
+        $scope.loadFile = function (file) {
+          $modalInstance.close(file);
+        };
+        $scope.cancel = function () {
+          $modalInstance.dismiss('cancel');
+        };
+      }],
+      templateUrl: './loadLog.html'
+    });
+    modal.result.then(function (file) {
+      window.logParser.loadFromBrowserFile(file, function (data) {
+        setDataFromParser(data);
+      });
+    });
+  }
+
+}]);
+
+var fileModel = helperApp.directive('fileDragger', [function () {
+  return {
+    templateUrl: './fileDrag.html',
+    transclude: true,
+    scope: {
+      fileDragger: '=',
+      fileDropCallback: '='
+    },
+    link: function (scope, element) {
+      scope.hover = false;
+      console.log(element);
+      element.bind('dragover', function (event) {
+        event.preventDefault();
+        return false;
+      });
+      element.bind('dragenter', function (event) {
+        console.log('enter');
+        scope.$evalAsync('hover = true');
+        event.preventDefault();
+        return false;
+      });
+      element.bind('dragleave', function (event) {
+        scope.$evalAsync('hover = false');
+        console.log('leave');
+        return false;
+      });
+      element.bind('drop', function (event) {
+        console.log('drop');
+        event.preventDefault();
+        scope.$apply(function () {
+          scope.fileDragger = event.originalEvent.dataTransfer.files[0];
+          scope.hover = false;
+          if (scope.fileDropCallback && typeof(scope.fileDropCallback) === 'function') {
+            scope.fileDropCallback(scope.fileDragger);
+          }
+        });
+      });
+    }
+  }
 }]);

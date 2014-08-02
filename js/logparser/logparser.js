@@ -2,7 +2,7 @@
  * Created by pwootage on 7/29/2014.
  */
 
-var parser = (function (angular) {
+var parser = (function () {
   var helper = {
     loadFromBrowserFile: function(fileToLoad, callback) {
       var reader = new FileReader();
@@ -17,7 +17,7 @@ var parser = (function (angular) {
       var lines = data.split(/[\n\r]+/);
       console.debug(lines);
       var seed = /Seed:\s+([0-9]+)/.exec(lines[0]);
-      var pickups = /^Excluded pickups:\s(([0-9]+\s)*)$/.exec(lines[1]);
+      var pickups = /^Excluded pickups:\s(([0-9]+\s*)*)$/.exec(lines[1]);
       ret.seed =  parseInt(seed[1]) || 0;
       ret.pickupsFixed = pickups[1].trim().split(' ') || [];
       var itemList = [];
@@ -40,5 +40,5 @@ var parser = (function (angular) {
     }
   };
   return helper;
-})(angular);
+})();
 window.logParser = parser;

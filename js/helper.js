@@ -195,7 +195,21 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
     modal.result.then(function (file) {
       window.logParser.loadFromBrowserFile(file, function (data) {
         setDataFromParser(data);
+        $scope.fileData = data;
       });
+    });
+  };
+
+  $scope.checkCompletability = function() {
+    var completability = window.completabilityCheck($scope.locations);
+    $modal.open({
+      controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
+        $scope.comp = completability;
+        $scope.close = function () {
+          $modalInstance.close();
+        };
+      }],
+      templateUrl: './completability.html'
     });
   }
 

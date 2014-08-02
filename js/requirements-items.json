@@ -1,0 +1,24 @@
+{
+  "wave": [
+    "Wave Beam"
+  ],
+  "ice": [
+    "Ice Beam"
+  ],
+  "plasma": [
+    "Plasma Beam"
+  ],
+  "boost": [
+    "Boost Ball"
+  ],
+  "spider": [
+    "Spider Ball"
+  ],
+  "supers": [
+    "Super Missile",
+    "Charge Beam"
+  ],
+  "phazon": [
+    "Phazon Suit"
+  ]
+}

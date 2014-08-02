@@ -586,7 +586,7 @@
     "location": "Phazon Mining Tunnel",
     "item": "Artifact of Newborn",
     "requires": [
-      ["wave", "ice", "plasma", "plasmasuit"]
+      ["wave", "ice", "plasma", "phazon"]
     ]
   },
   {

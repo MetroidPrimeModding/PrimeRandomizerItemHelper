@@ -17,7 +17,8 @@
     'Artifact of Warrior',
     'Artifact of Newborn',
     'Artifact of Nature',
-    'Artifact of Strength'
+    'Artifact of Strength',
+    'Phazon Suit'
   ];
   var requirementsItems = {};
   angular.injector(['ng']).invoke(function($http) {

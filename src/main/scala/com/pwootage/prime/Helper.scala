@@ -14,6 +14,6 @@ object Helper extends JSApp {
 
   def main(): Unit = {
     val helper = angular.module("helper", js.Array("ui.bootstrap"))
-    val pc = helper.scalaController("PageController", new PageController())
+    val pc = helper.controller("PageController", new PageController())
   }
 }

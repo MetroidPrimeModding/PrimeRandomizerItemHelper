@@ -6,6 +6,9 @@ import angular.AngularScala.{AngularController}
 import scala.scalajs.js
 
 /**
+ * Eventually I'm going to have to rewrite helper.js into scala but for now that's
+ * rather annoying due to the fact scope is very very untyped.
+ *
  * Created by pwootage on 8/2/14.
  */
 class PageController extends AngularController {
@@ -21,8 +24,5 @@ class PageController extends AngularController {
     $http = services(0).asInstanceOf[AngularHTTP]
 
     $scope.mode = 1
-    $scope.loadBlankDropdown = false
   }
-
-  //  $scope.update("mode", 1)
 }

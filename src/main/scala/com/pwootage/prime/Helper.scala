@@ -13,7 +13,6 @@ object Helper extends JSApp {
   val console = js.Dynamic.global.console
 
   def main(): Unit = {
-    val helper = angular.module("helper", js.Array("ui.bootstrap"))
-    val pc = helper.controller("PageController", new PageController())
+    val helper = angular.module("helper")
   }
 }

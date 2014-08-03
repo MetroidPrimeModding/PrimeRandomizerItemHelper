@@ -11,7 +11,8 @@ libraryDependencies ++= Seq(
 )
 
 ScalaJSKeys.jsDependencies ++= Seq(
-  ProvidedJS / "ui-bootstrap-tpls-0.11.0.min.js"
+  ProvidedJS / "ui-bootstrap-tpls-0.11.0.min.js",
+  ProvidedJS / "helper.js"
 )
 
 skip in ScalaJSKeys.packageJSDependencies := false

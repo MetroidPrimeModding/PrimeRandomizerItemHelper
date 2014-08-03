@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="helper">
+<head lang="en">
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <!--TODO: reENABLE D:-->
+  <!--<script type="text/javascript">-->
+    <!--(function (i, s, o, g, r, a, m) {-->
+      <!--i['GoogleAnalyticsObject'] = r;-->
+      <!--i[r] = i[r] || function () {-->
+        <!--(i[r].q = i[r].q || []).push(arguments)-->
+      <!--}, i[r].l = 1 * new Date();-->
+      <!--a = s.createElement(o),-->
+          <!--m = s.getElementsByTagName(o)[0];-->
+      <!--a.async = 1;-->
+      <!--a.src = g;-->
+      <!--m.parentNode.insertBefore(a, m)-->
+    <!--})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');-->
+
+    <!--ga('create', 'UA-53207226-1', 'auto');-->
+    <!--ga('send', 'pageview');-->
+  <!--</script>-->
+  <!--<script type="text/javascript" src="../js_libs/jquery-2.1.1.min.js"></script>-->
+  <!--<script type="text/javascript" src="../js_libs/angular.min.js"></script>-->
+  <!--<script type="text/javascript" src="../js_libs/ui-bootstrap-tpls-0.11.0.min.js"></script>-->
+  <!--<script type="text/javascript" src="../js/helper.js"></script>-->
+  <!--<script type="text/javascript" src="../js/logparser/logparser.js"></script>-->
+  <!--<script type="text/javascript" src="../js/completabilityChecker.js"></script>-->
+  <script type="text/javascript" src="../js_compiled/prime-randomizer-helper-jsdeps.js"></script>
+  <script type="text/javascript" src="../js_compiled/prime-randomizer-helper-fastopt.js"></script>
+  <script type="text/javascript">
+    com.pwootage.prime.Helper().main();
+  </script>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/helper.css"/>
+  <title>Prime Randomizer Item Location Tracker</title>
+</head>
+<body ng-controller="PageController">
+<div class="container-fluid">
+  <nav class="navbar navbar-default" role="navigation">
+    <a class="navbar-brand" href="#">Prime Randomizer Helper</a>
+    <ul class="nav navbar-nav">
+      <li><a href ng-click="loadLogFile()">Load Log File</a></li>
+      <li class="dropdown" is-open="loadBlankDropdown">
+        <a href class="dropdown-toggle">Load Empty Data <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href ng-click="reset(1)">Prime 1</a></li>
+          <li class="divider"></li>
+          <li><a href ng-click="reset(2)">Prime 2</a></li>
+        </ul>
+      </li>
+      <li><a href ng-click="checkCompletability()">Check Completability</a></li>
+    </ul>
+  </nav>
+  <div class="col-md-12">
+    <p class="text-center col-xs-12">
+      <small class="bug-text">
+        Feature requests and bugs go here:
+        <a href="https://github.com/Pwootage/PrimeRandomizerItemHelper/issues">https://github.com/Pwootage/PrimeRandomizerItemHelper/issues</a>
+      </small>
+    </p>
+  </div>
+  <div class="col-md-6">
+    <h2>Item Locations
+      <span
+          class="items-rem-count">{{itemFoundCount}} visited {{itemTotalCount}} total</span>
+    </h2>
+
+    <div class="input-group">
+      <div class="input-group-btn">
+        <label class="btn btn-default" ng-model="locationShow" btn-radio="'all'">All</label>
+        <label class="btn btn-default" ng-model="locationShow" btn-radio="'found'">Found</label>
+        <label class="btn btn-default" ng-model="locationShow" btn-radio="'remaining'">Remaining</label>
+      </div>
+      <input type="text" ng-model="locationSearch" class="form-control" placeholder="Search..."/>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="location in locations"
+          ng-show="([location] | filter:locationSearchImpl(locationSearch)).length && shouldShowLocation(location)">
+        <div>
+          <h4 class="item-location">{{location.location}}</h4>
+          {{location.area}}
+          <span class="item-original">{{location.item}}</span>
+        </div>
+        <div class="input-group location-input-group">
+          <span class="input-group-btn">
+            <label class="btn btn-default" ng-model="location.found" btn-checkbox>Found</label>
+          <label class="btn btn-default" ng-model="location.obtained" btn-checkbox
+                 ng-show="location.found">Obtained</label>
+          </span>
+          <input class="form-control" type="text" ng-model="location.actualItem"
+                 typeahead="i for i in itemsRemaining() | filter:$viewValue | limitTo:8" ng-show="location.found"/>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h2>
+      Items <span class="items-rem-count">{{itemFoundCount}} found {{itemObtainedCount}} obtained {{itemTotalCount}} total</span>
+    </h2>
+
+    <div class="input-group">
+      <div class="input-group-btn">
+        <label class="btn btn-default" ng-model="itemShow" btn-radio="'all'">All</label>
+        <label class="btn btn-default" ng-model="itemShow" btn-radio="'found'">Found</label>
+        <label class="btn btn-default" ng-model="itemShow" btn-radio="'remaining'">Remaining</label>
+      </div>
+      <input type="text" ng-model="itemSearch" class="form-control" placeholder="Search..."/>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="(item, val) in items"
+          ng-class="{'done': val.found >= val.count && val.obtained >= val.count}"
+          ng-show="([item] | filter:itemSearch).length && shouldShowItem(val)">
+        <div class="row">
+          <div class="col-xs-6">
+            <span class="item-name">{{item}}</span>
+          </div>
+          <div class="col-xs-3">
+            <span class="item-count"
+                  ng-class="{'done': val.found >= val.count}">{{val.found || 0}}/{{val.count}}</span>
+            <span class="item-count-label" ng-class="{'done': val.found >= val.count}">found</span>
+          </div>
+          <div class="col-xs-3">
+            <span class="item-count"
+                  ng-class="{'done': val.obtained >= val.count}">{{val.obtained || 0}}/{{val.count}}</span>
+            <span class="item-count-label" ng-class="{'done': val.obtained >= val.count}">obtained</span>
+          </div>
+        </div>
+        <div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -12,7 +12,10 @@
   {
     "area": "Chozo",
     "location": "Main Plaza (Tree)",
-    "item": "Missile Expansion"
+    "item": "Missile Expansion",
+    "requires": [
+      ["supers"]
+    ]
   },
   {
     "area": "Chozo",

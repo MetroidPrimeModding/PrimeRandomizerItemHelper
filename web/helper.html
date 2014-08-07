@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <!--<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-53207226-1', 'auto');
+    ga('send', 'pageview');
+  </script>-->
+  <script type="application/dart" src="dart/helper.dart"></script>
+  <script src="../packages/browser/dart.js"></script>
+  <script src="packages/shadow_dom/shadow_dom.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="css/helper.css"/>
+  <title>Prime Randomizer Item Location Tracker</title>
+</head>
+<body page-controller>
+<div class="container-fluid">
+  <nav class="navbar navbar-default" role="navigation">
+    <a class="navbar-brand" href="#">Prime Randomizer Helper</a>
+    <ul class="nav navbar-nav">
+      <li><a href ng-click="loadLogFile()">Load Log File</a></li>
+      <li class="dropdown" is-open="loadBlankDropdown">
+        <a href class="dropdown-toggle">Load Empty Data <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href ng-click="reset(1)">Prime 1</a></li>
+          <li class="divider"></li>
+          <li><a href ng-click="reset(2)">Prime 2</a></li>
+        </ul>
+      </li>
+      <li><a href ng-click="checkCompletability()">Check Completability</a></li>
+    </ul>
+  </nav>
+  <div class="col-md-12">
+    <p class="text-center col-xs-12">
+      <small class="bug-text">
+        Feature requests and bugs go here:
+        <a href="https://github.com/Pwootage/PrimeRandomizerItemHelper/issues">https://github.com/Pwootage/PrimeRandomizerItemHelper/issues</a>
+      </small>
+    </p>
+  </div>
+  <div>
+  {{PageController.test}}
+  </div>
+</div>
+</body>
+</html>

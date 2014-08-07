@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h2>Completability Status</h2>
+</div>
+<div class="modal-body">
+  <h3>Completable: <span ng-class="{'green': comp.isCompletable, 'red': !comp.isCompletable}">{{comp.isCompletable}}</span></h3>
+  <table class="table table-hover item-obt-table">
+    <tr>
+      <th>Item</th>
+      <td>Obtainable</td>
+    </tr>
+    <tr ng-repeat="(key, item) in comp" ng-if="key !== 'isCompletable'"
+        popover="{{item.trace}}" popover-trigger="mouseenter">
+      <td>{{key}}</td>
+      <td ng-class="{'green': item.obt, 'red': !item.obt}">{{item.obt}}</td>
+    </tr>
+  </table>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-warning btn-block load-cancel-button" ng-click="close()">Close</button>
+</div>

@@ -1,0 +1,115 @@
+@import (inline) "../css/bootstrap.css";
+
+.item-grid {
+  background-color: #000000;
+  padding: 5px;
+  display: inline-block;
+}
+
+@item-size: 80px;
+
+.item-row {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: @item-size;
+}
+
+.item-box {
+  display: inline-block;
+  background: url("img/Grid_Box.png") no-repeat;
+  background-size: @item-size;
+  width: @item-size;
+  height: @item-size;
+  margin: 0;
+  padding: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.item {
+  display: inline-block;
+  width: @item-size;
+  height: @item-size;
+  margin: 0;
+  padding: 0;
+  background-size: @item-size;
+  transition: filter 0.5s;
+  -webkit-transition: -webkit-filter 0.5s;
+
+  &.item-disabled {
+    filter: grayscale(50%) blur(4px);
+    -webkit-filter: grayscale(50%) blur(4px);
+  }
+
+  &.item-wave {
+    background-image: url("img/Wave_Beam.png");
+  }
+  &.item-ice {
+    background-image: url("img/Ice_Beam.png");
+  }
+  &.item-plasma {
+    background-image: url("img/Plasma_Beam.png");
+  }
+
+  &.item-varia {
+    background-image: url("img/Varia_Suit.png");
+  }
+  &.item-gravity {
+    background-image: url("img/Gravity_Suit.png");
+  }
+  &.item-phazon {
+    background-image: url("img/Phazon_Suit.png");
+  }
+
+  &.item-morph {
+    background-image: url("img/Morph_ball.png");
+  }
+  &.item-boost {
+    background-image: url("img/Boost_Ball.png");
+  }
+  &.item-spider {
+    background-image: url("img/Spider_Ball.png");
+  }
+
+  &.item-missile {
+    background-image: url("img/Missile_Launcher.png");
+  }
+  &.item-charge {
+    background-image: url("img/Charge_Beam.png");
+  }
+  &.item-bomb {
+    background-image: url("img/Bombs.png");
+  }
+  &.item-power-bomb {
+    background-image: url("img/Power_Bomb.png");
+  }
+
+  &.item-space-jump {
+    background-image: url("img/Space_Jump_Boots.png");
+  }
+  &.item-grapple {
+    background-image: url("img/Grapple_Beam.png");
+  }
+  &.item-thermal {
+    background-image: url("img/Thermal_Visor.png");
+  }
+  &.item-xray {
+    background-image: url("img/X-Ray_Visor.png");
+  }
+
+  &.item-super-missile {
+    background-image: url("img/Super_Missile.png");
+  }
+  &.item-wavebuster {
+    background-image: url("img/Wavebuster.png");
+  }
+  &.item-ice-spreader {
+    background-image: url("img/Ice_Spreader.png");
+  }
+  &.item-flamethrower {
+    background-image: url("img/Flamethrower.png");
+  }
+}

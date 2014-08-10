@@ -19,18 +19,18 @@
     ga('create', 'UA-53207226-1', 'auto');
     ga('send', 'pageview');
   </script>-->
+  <link rel="stylesheet" href="less/helper.css" />
   <script type="application/dart" src="dart/helper.dart"></script>
   <script src="../packages/browser/dart.js"></script>
   <script src="packages/shadow_dom/shadow_dom.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
-  <link type="text/css" rel="stylesheet" href="css/helper.css"/>
   <title>Prime Randomizer Item Location Tracker</title>
 </head>
-<body page-controller>
-<div class="container-fluid">
+<body>
+<div>
   <nav class="navbar navbar-default" role="navigation">
     <a class="navbar-brand" href="#">Prime Randomizer Helper</a>
     <ul class="nav navbar-nav">
+      <li><a href="#/items">Items</a></li>
       <li><a href ng-click="loadLogFile()">Load Log File</a></li>
       <li class="dropdown" is-open="loadBlankDropdown">
         <a href class="dropdown-toggle">Load Empty Data <span class="caret"></span></a>
@@ -52,7 +52,7 @@
     </p>
   </div>
   <div>
-  {{PageController.test}}
+    <ng-view></ng-view>
   </div>
 </div>
 </body>

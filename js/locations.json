@@ -281,7 +281,7 @@
   {
     "area": "Phendrana",
     "location": "Quarantine Monitor",
-    "item": "Missile Expansion",
+    "item": " Missile Expansion",
     "requires": [
      ["wave", "grapple"],
      ["wave", "sj"]

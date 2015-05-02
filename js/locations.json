@@ -179,6 +179,7 @@
     "requires": [
      ["sj"],
      ["boost", "spider"]
+     ]
   },
   {
     "area": "Chozo",

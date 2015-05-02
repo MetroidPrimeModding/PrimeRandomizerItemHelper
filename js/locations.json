@@ -14,7 +14,7 @@
     "location": "Main Plaza (Tree)",
     "item": "Missile Expansion",
     "requires": [
-      ["supers"]
+      ["supers", "charge"]
     ]
   },
   {
@@ -176,6 +176,9 @@
     "area": "Chozo",
     "location": "Crossway",
     "item": "Missile Expansion"
+    "requires": [
+     ["sj"],
+     ["boost", "spider"]
   },
   {
     "area": "Chozo",
@@ -283,8 +286,7 @@
     "location": "Quarantine Monitor",
     "item": " Missile Expansion",
     "requires": [
-     ["wave", "grapple"],
-     ["wave", "sj"]
+     ["wave"]
     ]
   },
   {

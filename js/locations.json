@@ -265,7 +265,7 @@
   {
     "area": "Phendrana",
     "location": "Quarantine Cave",
-    "item": "Spider Ball"
+    "item": "Spider Ball",
     "requires": [
     ["wave"]
     ]
@@ -281,7 +281,7 @@
   {
     "area": "Phendrana",
     "location": "Quarantine Monitor",
-    "item": "Missile Expansion"
+    "item": "Missile Expansion",
     "requires": [
      ["wave", "grapple"],
      ["wave", "sj"]
@@ -409,7 +409,7 @@
   {
     "area": "Tallon",
     "location": "Root Cave",
-    "item": "Missile Expansion"
+    "item": "Missile Expansion",
     "requires": [
       ["sj"],
       ["grapple"]
@@ -428,7 +428,7 @@
   {
     "area": "Tallon",
     "location": "Arbor Chamber",
-    "item": "Missile Expansion"
+    "item": "Missile Expansion",
     "requires": [
       ["sj"],
       ["grapple"]

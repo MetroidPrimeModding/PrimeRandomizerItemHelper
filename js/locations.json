@@ -223,7 +223,7 @@
     "location": "Ice Ruins West",
     "item": "Power Bomb Expansion",
     "requires": [
-      ["ice"]
+      ["plasma"]
     ]
   },
   {

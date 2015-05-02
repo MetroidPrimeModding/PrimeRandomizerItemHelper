@@ -147,8 +147,8 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
           var matches = 0;
           if (value.area === tempList[i].area) matches++;
           if (value.location === tempList[i].location) matches++;
-          if (value.item === tempList[i].originalItem) matches++;
-          if (matches >= 3) {
+          //if (value.item === tempList[i].originalItem) matches++;
+          if (matches >= 2) {
             loaded++;
             $scope.locations[key].actualItem = tempList[i].item;
             tempList.splice(i, 1);

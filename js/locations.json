@@ -175,7 +175,7 @@
   {
     "area": "Chozo",
     "location": "Crossway",
-    "item": "Missile Expansion"
+    "item": "Missile Expansion",
     "requires": [
      ["sj"],
      ["boost", "spider"]

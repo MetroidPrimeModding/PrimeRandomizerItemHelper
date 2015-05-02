@@ -210,7 +210,7 @@
     "location": "Phendrana Shorelines (Spider track)",
     "item": "Missile Expansion",
     "requires": [
-      ["supers", "spider"]
+      ["supers", "spider", "charge"]
     ]
   },
   {
@@ -266,19 +266,26 @@
     "area": "Phendrana",
     "location": "Quarantine Cave",
     "item": "Spider Ball"
+    "requires": [
+    ["wave"]
+    ]
   },
   {
     "area": "Phendrana",
     "location": "Research Lab Hydra",
     "item": "Missile Expansion",
     "requires": [
-      ["wave"]
+      ["wave", "supers", "charge"]
     ]
   },
   {
     "area": "Phendrana",
     "location": "Quarantine Monitor",
     "item": "Missile Expansion"
+    "requires": [
+     ["wave", "grapple"],
+     ["wave", "sj"]
+    ]
   },
   {
     "area": "Phendrana",
@@ -311,7 +318,8 @@
     "location": "Research Core",
     "item": "Thermal Visor",
     "requires": [
-      ["wave"]
+      ["wave", "ice"],
+      ["wave", "sj"]
     ]
   },
   {
@@ -319,7 +327,7 @@
     "location": "Frost Cave",
     "item": "Missile Expansion",
     "requires": [
-      ["wave"]
+      ["wave", "ice"]
     ]
   },
   {
@@ -345,7 +353,8 @@
     "location": "Gravity Chamber (Underwater)",
     "item": "Gravity Suit",
     "requires": [
-      ["wave", "ice"]
+      ["wave", "ice", "sj"],
+      ["wave", "ice", "gravity"]
     ]
   },
   {
@@ -353,7 +362,9 @@
     "location": "Gravity Chamber (Grapple ledge)",
     "item": "Missile Expansion",
     "requires": [
-      ["wave", "ice"]
+      ["wave", "ice", "sj"],
+      ["wave", "ice", "plasma", "grapple"],
+      ["wave", "ice", "charge"]
     ]
   },
   {
@@ -399,6 +410,10 @@
     "area": "Tallon",
     "location": "Root Cave",
     "item": "Missile Expansion"
+    "requires": [
+      ["sj"],
+      ["grapple"]
+    ]
   },
   {
     "area": "Tallon",
@@ -414,6 +429,10 @@
     "area": "Tallon",
     "location": "Arbor Chamber",
     "item": "Missile Expansion"
+    "requires": [
+      ["sj"],
+      ["grapple"]
+    ]
   },
   {
     "area": "Tallon",
@@ -428,7 +447,7 @@
     "location": "Biohazard Containment",
     "item": "Missile Expansion",
     "requires": [
-      ["ice", "supers"]
+      ["ice", "supers", "charge"]
     ]
   },
   {
@@ -436,7 +455,8 @@
     "location": "Hydro Access Tunnel",
     "item": "Energy Tank",
     "requires": [
-      ["ice"]
+      ["ice", "boost"]
+      ["ice", "gravity"]
     ]
   },
   {
@@ -460,7 +480,7 @@
     "location": "Life Grove (Start)",
     "item": "X-Ray Visor",
     "requires": [
-      ["ice"]
+      ["ice", "pb"]
     ]
   },
   {
@@ -468,7 +488,7 @@
     "location": "Life Grove (Underwater spinner)",
     "item": "Artifact of Chozo",
     "requires": [
-      ["ice", "pb"]
+      ["ice"]
     ]
   },
   {
@@ -500,7 +520,7 @@
     "location": "Storage Depot A",
     "item": "Flamethrower",
     "requires": [
-      ["wave", "ice", "plasma"]
+      ["wave", "ice", "plasma", "pb"]
     ]
   },
   {
@@ -548,7 +568,7 @@
     "location": "Processing Center Access",
     "item": "Energy Tank",
     "requires": [
-      ["wave", "ice", "plasma"]
+      ["wave", "ice", "plasma", "pb"]
     ]
   },
   {
@@ -572,7 +592,7 @@
     "location": "Metroid Quarantine B",
     "item": "Missile Expansion",
     "requires": [
-      ["wave", "ice", "plasma", "supers"]
+      ["wave", "ice", "plasma", "supers", "charge"]
     ]
   },
   {
@@ -658,7 +678,7 @@
     "location": "Plasma Processing",
     "item": "Plasma Beam",
     "requires": [
-      ["ice"]
+      ["wave", "ice"]
     ]
   },
   {

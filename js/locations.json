@@ -82,7 +82,10 @@
   {
     "area": "Chozo",
     "location": "Tower Chamber",
-    "item": "Artifact of Lifegiver"
+    "item": "Artifact of Lifegiver",
+    "requires": [
+      ["wave"]
+    ]
   },
   {
     "area": "Chozo",

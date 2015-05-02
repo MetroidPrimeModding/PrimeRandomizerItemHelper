@@ -183,7 +183,8 @@
     "item": "Artifact of World",
     "requires": [
       ["ice", "boost"],
-      ["ice", "plasma"]
+      ["ice", "plasma"],
+      ["ice"]
     ]
   },
   {

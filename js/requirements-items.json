@@ -11,11 +11,16 @@
   "boost": [
     "Boost Ball"
   ],
+  "grapple": [
+    "Grapple Beam"
+  ],
   "spider": [
     "Spider Ball"
   ],
   "supers": [
     "Super Missile",
+  ],
+  "charge": [
     "Charge Beam"
   ],
   "phazon": [

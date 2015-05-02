@@ -231,8 +231,7 @@
     "location": "Ice Ruins East (Behind ice)",
     "item": "Missile Expansion",
     "requires": [
-      ["plasma"],
-      ["boost"]
+      ["plasma"]
     ]
   },
   {

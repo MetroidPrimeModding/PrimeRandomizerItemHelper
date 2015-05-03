@@ -18,6 +18,9 @@
     "Super Missile",
     "Charge Beam"
   ],
+  "charge": [
+    "Charge Beam"
+  ],
   "phazon": [
     "Phazon Suit"
   ],
@@ -29,5 +32,8 @@
   ],
   "sj": [
     "Space Jump Boots"
+  ],
+  "grapple" : [
+    "Grapple Beam"
   ]
 }

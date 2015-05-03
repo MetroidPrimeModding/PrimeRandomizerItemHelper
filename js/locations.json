@@ -14,7 +14,7 @@
     "location": "Main Plaza (Tree)",
     "item": "Missile Expansion",
     "requires": [
-      ["supers", "charge"]
+      ["supers"]
     ]
   },
   {
@@ -214,7 +214,7 @@
     "location": "Phendrana Shorelines (Spider track)",
     "item": "Missile Expansion",
     "requires": [
-      ["supers", "spider", "charge"]
+      ["supers", "spider"]
     ]
   },
   {
@@ -279,7 +279,7 @@
     "location": "Research Lab Hydra",
     "item": "Missile Expansion",
     "requires": [
-      ["wave", "supers", "charge"]
+      ["wave", "supers"]
     ]
   },
   {
@@ -450,7 +450,7 @@
     "location": "Biohazard Containment",
     "item": "Missile Expansion",
     "requires": [
-      ["ice", "supers", "charge"]
+      ["ice", "supers"]
     ]
   },
   {
@@ -595,7 +595,7 @@
     "location": "Metroid Quarantine B",
     "item": "Missile Expansion",
     "requires": [
-      ["wave", "ice", "plasma", "supers", "charge"]
+      ["wave", "ice", "plasma", "supers"]
     ]
   },
   {

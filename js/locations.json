@@ -458,7 +458,7 @@
     "location": "Hydro Access Tunnel",
     "item": "Energy Tank",
     "requires": [
-      ["ice", "boost"]
+      ["ice", "boost"],
       ["ice", "gravity"]
     ]
   },

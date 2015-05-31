@@ -297,7 +297,7 @@
     "item": "Super Missile",
     "requires": [
       ["wave", "sj"],
-      ["wave", "ice"]
+      ["wave", "ice", "boost"]
     ]
   },
   {

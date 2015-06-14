@@ -415,8 +415,7 @@
     "location": "Root Cave",
     "item": "Missile Expansion",
     "requires": [
-      ["sj"],
-      ["grapple"]
+      ["sj"]
     ]
   },
   {
@@ -434,8 +433,7 @@
     "location": "Arbor Chamber",
     "item": "Missile Expansion",
     "requires": [
-      ["sj"],
-      ["grapple"]
+      ["sj"]
     ]
   },
   {

@@ -441,7 +441,8 @@
     "location": "Cargo Freight Lift to Deck Gamma",
     "item": "Energy Tank",
     "requires": [
-      ["ice"]
+      ["ice", "wave"],
+      ["ice", "gravity"]
     ]
   },
   {
@@ -449,7 +450,8 @@
     "location": "Biohazard Containment",
     "item": "Missile Expansion",
     "requires": [
-      ["ice", "supers"]
+      ["ice", "supers", "wave"],
+      ["ice", "supers", "gravity"]
     ]
   },
   {
@@ -457,7 +459,6 @@
     "location": "Hydro Access Tunnel",
     "item": "Energy Tank",
     "requires": [
-      ["ice", "boost"],
       ["ice", "gravity"]
     ]
   },

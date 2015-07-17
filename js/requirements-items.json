@@ -35,5 +35,8 @@
   ],
   "grapple" : [
     "Grapple Beam"
+  ],
+  "gravity": [
+    "Gravity Suit"
   ]
 }

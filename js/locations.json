@@ -1,12 +1,12 @@
 [
   {
     "area": "Chozo",
-    "location": "Main Plaza (Half-pipe)",
+    "location": "Main Plaza (Half-Pipe)",
     "item": "Missile Expansion"
   },
   {
     "area": "Chozo",
-    "location": "Main Plaza (Grapple ledge)",
+    "location": "Main Plaza (Grapple Ledge)",
     "item": "Missile Expansion"
   },
   {
@@ -19,7 +19,7 @@
   },
   {
     "area": "Chozo",
-    "location": "Main Plaza (Locked door)",
+    "location": "Main Plaza (Locked Door)",
     "item": "Energy Tank"
   },
   {
@@ -29,17 +29,17 @@
   },
   {
     "area": "Chozo",
-    "location": "Ruined Shrine (\"Beetle battle\")",
+    "location": "Ruined Shrine (\"Beetle Battle\")",
     "item": "Morph Ball"
   },
   {
     "area": "Chozo",
-    "location": "Ruined Shrine (Half-pipe)",
+    "location": "Ruined Shrine (Half-Pipe)",
     "item": "Missile Expansion"
   },
   {
     "area": "Chozo",
-    "location": "Ruined Shrine (Lower tunnel)",
+    "location": "Ruined Shrine (Lower Tunnel)",
     "item": "Missile Expansion"
   },
   {
@@ -89,12 +89,12 @@
   },
   {
     "area": "Chozo",
-    "location": "Ruined Gallery (Missile wall)",
+    "location": "Ruined Gallery (Missile Wall)",
     "item": "Missile Expansion"
   },
   {
     "area": "Chozo",
-    "location": "Ruined Gallery (Morph tunnel)",
+    "location": "Ruined Gallery (Tunnel)",
     "item": "Missile Expansion"
   },
   {
@@ -129,7 +129,7 @@
   },
   {
     "area": "Chozo",
-    "location": "Watery Hall (Scan puzzle)",
+    "location": "Watery Hall (Scan Puzzle)",
     "item": "Charge Beam"
   },
   {
@@ -144,7 +144,7 @@
   },
   {
     "area": "Chozo",
-    "location": "Dynamo (Spider track)",
+    "location": "Dynamo (Spider Track)",
     "item": "Missile Expansion"
   },
   {
@@ -159,7 +159,7 @@
   },
   {
     "area": "Chozo",
-    "location": "Furnace (Spider tracks)",
+    "location": "Furnace (Spider Tracks)",
     "item": "Missile Expansion"
   },
   {
@@ -202,7 +202,7 @@
   },
   {
     "area": "Phendrana",
-    "location": "Phendrana Shorelines (Behind ice)",
+    "location": "Phendrana Shorelines (Behind Ice)",
     "item": "Missile Expansion",
     "requires": [
       ["plasma"],
@@ -211,7 +211,7 @@
   },
   {
     "area": "Phendrana",
-    "location": "Phendrana Shorelines (Spider track)",
+    "location": "Phendrana Shorelines (Spider Track)",
     "item": "Missile Expansion",
     "requires": [
       ["supers", "spider"]
@@ -236,7 +236,7 @@
   },
   {
     "area": "Phendrana",
-    "location": "Ice Ruins East (Behind ice)",
+    "location": "Ice Ruins East (Behind Ice)",
     "item": "Missile Expansion",
     "requires": [
       ["plasma"],
@@ -245,7 +245,7 @@
   },
   {
     "area": "Phendrana",
-    "location": "Ice Ruins East (Spider track)",
+    "location": "Ice Ruins East (Spider Track)",
     "item": "Missile Expansion"
   },
   {
@@ -345,7 +345,7 @@
   },
   {
     "area": "Phendrana",
-    "location": "Research Lab Aether (Morph track)",
+    "location": "Research Lab Aether (Morph Track)",
     "item": "Missile Expansion",
     "requires": [
       ["wave", "sj"],
@@ -363,7 +363,7 @@
   },
   {
     "area": "Phendrana",
-    "location": "Gravity Chamber (Grapple ledge)",
+    "location": "Gravity Chamber (Grapple Ledge)",
     "item": "Missile Expansion",
     "requires": [
       ["wave", "ice", "sj"],
@@ -488,7 +488,7 @@
   },
   {
     "area": "Tallon",
-    "location": "Life Grove (Underwater spinner)",
+    "location": "Life Grove (Underwater Spinner)",
     "item": "Artifact of Chozo",
     "requires": [
       ["ice"]
@@ -665,12 +665,12 @@
   },
   {
     "area": "Magmoor",
-    "location": "Fiery Shores (Morph track)",
+    "location": "Fiery Shores (Morph Track)",
     "item": "Missile Expansion"
   },
   {
     "area": "Magmoor",
-    "location": "Fiery Shores (Warrior Shrine tunnel)",
+    "location": "Fiery Shores (Warrior Shrine Tunnel)",
     "item": "Power Bomb Expansion",
     "requires": [
       ["pb"]

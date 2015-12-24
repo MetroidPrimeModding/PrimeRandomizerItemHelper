@@ -156,6 +156,7 @@ var pageController = helperApp.controller('PageController', ['$scope', '$http', 
           }
         }
       });
+      console.log('unparsed items', tempList);
       if (loaded === 100 || loaded === 115) {
         alert('Loaded ' + loaded + ' items!');
       } else {

@@ -155,7 +155,7 @@
   {
     "area": "Chozo",
     "location": "Burn Dome (I. Drone)",
-    "item": "Bombs"
+    "item": "Morph Ball Bomb"
   },
   {
     "area": "Chozo",
@@ -584,7 +584,7 @@
   {
     "area": "Mines",
     "location": "Central Dynamo",
-    "item": "Power Bombs",
+    "item": "Power Bomb",
     "requires": [
       ["wave", "ice"]
     ]

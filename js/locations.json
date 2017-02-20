@@ -498,7 +498,7 @@
     "location": "Main Quarry",
     "item": "Missile Expansion",
     "requires": [
-      ["wave"]
+      ["wave", "ice"]
     ]
   },
   {

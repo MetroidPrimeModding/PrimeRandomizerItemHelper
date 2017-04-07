@@ -3,7 +3,7 @@ item-counter[item="missile-count"] {
     height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../img/items/missile_launcher.png");
+    background-image: url("../img/items/missile_big.png");
 }
 
 item-counter[item="etank-count"] {
@@ -11,7 +11,7 @@ item-counter[item="etank-count"] {
     height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../img/items/energy_tank.png");
+    background-image: url("../img/items/etank.png");
 }
 
 item-counter[item="missile"] {

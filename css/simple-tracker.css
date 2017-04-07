@@ -28,6 +28,10 @@ body {
     align-items: center;
 }
 
+[top-pad] {
+    padding-top: 30px;
+}
+
 item-counter {
     display: flex;
     flex-direction: column;

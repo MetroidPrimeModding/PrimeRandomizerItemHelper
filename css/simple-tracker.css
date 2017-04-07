@@ -45,7 +45,7 @@ item-counter {
 }
 
 item-counter, item-toggle {
-    transition: 0.5s;
+    transition: 0.3s;
     transition-property: filter, opacity;
     cursor: pointer;
 }

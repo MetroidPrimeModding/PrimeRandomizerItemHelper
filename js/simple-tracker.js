@@ -82,5 +82,14 @@ class ItemToggleElement extends HTMLElement {
     }
 }
 
+class NewTabLinkElement extends HTMLElement {
+    connectedCallback() {
+      this.addEventListener('click', event => {
+        window.open(window.location.href, 'Prime Item Tracker', 'resizable=no, toolbar=no, scrollbars=no, menubar=no, status=no, directories=no, width=400, height=610');
+      });
+    }
+}
+
 customElements.define('item-counter', ItemCounterElement);
 customElements.define('item-toggle', ItemToggleElement);
+customElements.define('newtab-link', NewTabLinkElement);

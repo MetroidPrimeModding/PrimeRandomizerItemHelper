@@ -52,9 +52,24 @@ item-counter, item-toggle {
 
 item-counter [counter], item-toggle {
     user-select: none;
+    -webkit-font-smoothing: antialiased;
     color: rgba(255, 255, 255, 0.6);
     font-family: sans-serif;
     font-size: 14px;
+}
+
+newtab-link {
+    user-select: none;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    filter: blur(1px) saturate(20%);
+}
+
+newtab-link:hover {
+    text-decoration: underline;
+    filter: none;
 }
 
 item-counter[count="0"], item-toggle[count="0"] {

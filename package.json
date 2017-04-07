@@ -1,0 +1,9 @@
+{
+  "name": "PrimeRandoHelper",
+  "description": "A prime randomizer helper",
+  "author": "Pwootage",
+  "version": "1.0.0",
+  "main": "electron/mainForm.js",
+  "dependencies": {
+  }
+}

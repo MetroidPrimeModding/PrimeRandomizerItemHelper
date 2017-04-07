@@ -64,7 +64,7 @@ class ItemCounterElement extends HTMLElement {
 class ItemToggleElement extends HTMLElement {
     connectedCallback() {
         this.setAttribute('count', '0');
-        
+
         this.addEventListener('click', event => {
             let item = document.querySelector(`item-counter[item=${this.item}]`);
             item.incrementCount();

@@ -73,6 +73,8 @@ function setupMenu() {
   Menu.setApplicationMenu(menu);
 }
 
+app.disableHardwareAcceleration();
+
 app.on('window-all-closed', () => {
   app.quit();
 });

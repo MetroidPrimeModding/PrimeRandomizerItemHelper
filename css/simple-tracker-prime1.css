@@ -1,17 +1,13 @@
 item-counter[item="missile-count"] {
-    width: 120px;
-    height: 120px;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-image: url("../img/items/missile_big.png");
 }
 
 item-counter[item="etank-count"] {
-    width: 120px;
-    height: 120px;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-image: url("../img/items/etank.png");
+}
+
+item-counter[item="pb-count"] {
+    background-image: url("../img/items/power_bombs_big.png");
 }
 
 item-counter[item="missile"] {

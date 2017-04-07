@@ -19,6 +19,7 @@
         ga('create', 'UA-53207226-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <script type="text/javascript" src="../libs/webcomponents-lite.js"></script>
     <script type="text/javascript" src="../js/simple-tracker.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker.css"/>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker-prime1.css"/>
@@ -28,10 +29,13 @@
 <div center>
     <div flex-column>
         <div flex-row>
-            <item-counter item="etank-count" max="14">
+            <item-counter big item="etank-count" max="14">
                 <span counter></span>
             </item-counter>
-            <item-counter item="missile-count" max="250" increment="5">
+            <item-counter big item="missile-count" max="250" increment="5">
+                <span counter></span>
+            </item-counter>
+            <item-counter big item="pb-count" max="8">
                 <span counter></span>
             </item-counter>
         </div>

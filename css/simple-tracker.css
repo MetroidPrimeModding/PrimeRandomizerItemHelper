@@ -50,6 +50,13 @@ item-counter, item-toggle {
     cursor: pointer;
 }
 
+item-counter[big] {
+    width: 90px;
+    height: 98px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 item-counter [counter], item-toggle {
     user-select: none;
     -webkit-font-smoothing: antialiased;

@@ -1,3 +1,7 @@
+item-counter[artifact][count="0"] {
+    filter: blur(1px) saturate(20%) hue-rotate(170deg);
+}
+
 item-counter[item="missile-count"] {
     background-image: url("../img/items/missile_big.png");
 }

@@ -3,7 +3,7 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const {ipcMain, Menu, MenuItem, dialog} = require('electron');
+const { ipcMain, Menu, MenuItem, dialog } = require('electron');
 
 var mainWindow = null;
 var mainWindow = null;
@@ -12,19 +12,38 @@ var currentClient = null;
 function setupMenu() {
   const template = [
     {
+      label: 'Game Select',
+      submenu: [
+        {
+          label: 'Prime 1',
+          // accelerator: 'CmdOrCtrl+1',
+          click(item, focusedWindow) {
+            goToPrime1(focusedWindow);
+          }
+        },
+        {
+          label: 'Prime 2',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToPrime2(focusedWindow);
+          }
+        }
+      ]
+    },
+    {
       label: 'View',
       submenu: [
         {
           label: 'Reload',
           accelerator: 'CmdOrCtrl+R',
-          click (item, focusedWindow) {
+          click(item, focusedWindow) {
             if (focusedWindow) focusedWindow.reload()
           }
         },
         {
           label: 'Toggle Developer Tools',
           accelerator: process.platform === 'darwin' ? 'Alt+Command+I' : 'Ctrl+Shift+I',
-          click (item, focusedWindow) {
+          click(item, focusedWindow) {
             if (focusedWindow) focusedWindow.webContents.toggleDevTools()
           }
         }
@@ -80,7 +99,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({width: 400, height: 620, title: "Prime Item Tracker"});
+  mainWindow = new BrowserWindow({ width: 400, height: 620, title: "Prime Item Tracker" });
   mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -88,3 +107,15 @@ app.on('ready', () => {
 
   setupMenu();
 });
+
+function goToPrime1(w) {
+  w = w || mainWindow;
+  w.setSize(400, 620)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1.html');
+}
+
+function goToPrime2(w) {
+  w = w || mainWindow;
+  w.setSize(400, 660)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2.html');
+}

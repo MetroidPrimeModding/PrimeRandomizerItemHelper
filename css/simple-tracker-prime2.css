@@ -1,0 +1,135 @@
+item-counter[item="missile-count"] {
+    background-image: url("../img/echoes/missile_expansion.png");
+}
+
+item-counter[item="etank-count"] {
+    background-image: url("../img/echoes/energy_tank.png");
+}
+
+item-counter[item="pb-count"] {
+    background-image: url("../img/echoes/power_bomb_expansion.png");
+}
+
+item-counter[item="ammo-upgrade"] {
+    background-image: url("../img/echoes/beam_ammo_expansion.png");
+}
+
+item-counter[item="missile"] {
+    background-image: url("../img/echoes/missile_launcher.png");
+}
+
+item-counter[item="super-missile"] {
+    background-image: url("../img/echoes/super_missile.png");
+}
+
+item-counter[item="dark-burst"] {
+    background-image: url("../img/echoes/dark_burst.png");
+}
+
+item-counter[item="sunburst"] {
+    background-image: url("../img/echoes/sunburst.png");
+}
+
+item-counter[item="sonic-boom"] {
+    background-image: url("../img/echoes/sonic_boom.png");
+}
+
+item-counter[item="gravity-boost"] {
+    background-image: url("../img/echoes/gravity_boost.png");
+}
+
+item-counter[item="space-jump"] {
+    background-image: url("../img/echoes/space_jump_boots.png");
+}
+
+item-counter[item="grapple"] {
+    background-image: url("../img/echoes/grapple_beam.png");
+}
+
+item-counter[item="bombs"] {
+    background-image: url("../img/echoes/morph_ball_bomb.png");
+}
+
+item-counter[item="boost"] {
+    background-image: url("../img/echoes/boost_ball.png");
+}
+
+item-counter[item="spider"] {
+    background-image: url("../img/echoes/spider_ball.png");
+}
+
+item-counter[item="energy-transfer-module"] {
+    background-image: url("../img/echoes/energy_transfer_module.png");
+}
+
+item-counter[item="dark-suit"] {
+    background-image: url("../img/echoes/dark_suit.png");
+}
+
+item-counter[item="light-suit"] {
+    background-image: url("../img/echoes/light_suit.png");
+}
+
+item-counter[item="dark-visor"] {
+    background-image: url("../img/echoes/dark_visor.png");
+}
+
+item-counter[item="echo-visor"] {
+    background-image: url("../img/echoes/echo_visor.png");
+}
+
+item-counter[item="seeker-missiles"] {
+    background-image: url("../img/echoes/seeker_launcher.png");
+}
+
+item-counter[item="dark-beam"] {
+    background-image: url("../img/echoes/dark_beam.png");
+}
+
+item-counter[item="light-beam"] {
+    background-image: url("../img/echoes/light_beam.png");
+}
+
+item-counter[item="anni-beam"] {
+    background-image: url("../img/echoes/annihilator_beam.png");
+}
+
+item-counter[item="power-bombs"] {
+    background-image: url("../img/echoes/power_bomb.png");
+}
+
+item-counter[item="screw-attack"] {
+    background-image: url("../img/echoes/screw_attack.png");
+}
+
+item-counter[item="violet-translator"] {
+    background-image: url("../img/echoes/violet_translator.png")
+}
+
+item-counter[item="amber-translator"] {
+    background-image: url("../img/echoes/amber_translator.png")
+}
+
+item-counter[item="emerald-translator"] {
+    background-image: url("../img/echoes/emerald_translator.png")
+}
+
+item-counter[item="cobalt-translator"] {
+    background-image: url("../img/echoes/cobalt_translator.png")
+}
+
+item-counter[item="agon-key"] {
+    background-image: url("../img/echoes/agon_key.png")
+}
+
+item-counter[item="torvus-key"] {
+    background-image: url("../img/echoes/torvus_key.png")
+}
+
+item-counter[item="ing-key"] {
+    background-image: url("../img/echoes/ing_hive_key.png")
+}
+
+item-counter[item="sky-key"] {
+    background-image: url("../img/echoes/sky_temple_key.png")
+}

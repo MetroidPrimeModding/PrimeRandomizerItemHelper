@@ -9,7 +9,7 @@
   "repository": "https://github.com/Pwootage/PrimeRandomizerItemHelper",
   "version": "1.0.0",
   "main": "electron/mainForm.js",
-  "dependencies": {
+  "devDependencies": {
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0"
   },
@@ -28,7 +28,7 @@
     "win": {
       "icon": "img",
       "target": [
-        "nsis", "zip"
+        "zip"
       ]
     },
     "mac": {
@@ -40,7 +40,7 @@
     "linux": {
       "icon": "img",
       "target": [
-        "AppImage", "tar.gz"
+        "tar.gz"
       ]
     }
   }

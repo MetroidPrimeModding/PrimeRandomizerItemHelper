@@ -40,7 +40,7 @@ class ItemCounterElement extends HTMLElement {
         this.setAttribute('count', String(num));
         let countSpan = this.querySelector('[counter]');
         if (countSpan) {
-            countSpan.innerHTML = `${num}/${this.max}`;
+            countSpan.innerHTML = `${num}`; // /${this.max}
         }
         let toggler = document.querySelector(`item-toggle[item=${this.item}]`);
         if (toggler) {

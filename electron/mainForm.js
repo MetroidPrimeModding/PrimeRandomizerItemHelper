@@ -12,20 +12,67 @@ var currentClient = null;
 function setupMenu() {
   const template = [
     {
-      label: 'Game Select',
+      label: 'Prime',
       submenu: [
         {
-          label: 'Prime 1',
+          label: 'Full',
           // accelerator: 'CmdOrCtrl+1',
           click(item, focusedWindow) {
-            goToPrime1(focusedWindow);
+            goToFullP(focusedWindow);
           }
         },
-        {
-          label: 'Prime 2',
+/*         {
+          label: 'Simple Icons',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
-            goToPrime2(focusedWindow);
+            goToSimple1(focusedWindow);
+          }
+		},*/
+		{
+          label: 'Simplified',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToSimplifiedP(focusedWindow);
+          }
+        },
+		{
+          label: 'Simplified + Expansions',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToExpansionsP(focusedWindow);
+          }
+        }
+      ]
+    },
+	{
+      label: 'Echoes',
+      submenu: [
+        {
+          label: 'Full',
+          // accelerator: 'CmdOrCtrl+1',
+          click(item, focusedWindow) {
+            goToFullE(focusedWindow);
+          }
+        },
+/*         {
+          label: 'Simple Icons',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToSimple2(focusedWindow);
+          }
+        }, */
+		{
+          label: 'Simplified',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToSimplifiedE(focusedWindow);
+          }
+        },
+		{
+          label: 'Simplified + Expansions',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToExpansionsE(focusedWindow);
           }
         }
       ]
@@ -99,8 +146,8 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({ width: 400, height: 620, title: "Prime Item Tracker" });
-  mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1.html');
+  mainWindow = new BrowserWindow({ width: 400, height: 511, title: "Metroid Prime 1 & 2 Item Tracker" });
+  mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
@@ -108,14 +155,50 @@ app.on('ready', () => {
   setupMenu();
 });
 
-function goToPrime1(w) {
+function goToFullP(w) {
   w = w || mainWindow;
-  w.setSize(400, 620)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime1.html');
+  w.setSize(400, 511)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
 }
 
-function goToPrime2(w) {
+/* function goToSimple1(w) {
   w = w || mainWindow;
-  w.setSize(400, 660)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime2.html');
+  w.setSize(400, 511)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1-full-alt.html');
+} */
+
+function goToSimplifiedP(w) {
+  w = w || mainWindow;
+  w.setSize(300, 260)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1-simplified.html');
+}
+
+function goToExpansionsP(w) {
+  w = w || mainWindow;
+  w.setSize(300, 260)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1-expansions.html');
+}
+
+function goToFullE(w) {
+  w = w || mainWindow;
+  w.setSize(336, 435)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-full.html');
+}
+
+/* function goToSimple2(w) {
+  w = w || mainWindow;
+  w.setSize(336, 435)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-full-alt.html');
+} */
+
+function goToSimplifiedE(w) {
+  w = w || mainWindow;
+  w.setSize(300, 290)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-simplified.html');
+}
+
+function goToExpansionsE(w) {
+  w = w || mainWindow;
+  w.setSize(300, 290)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-expansions.html');
 }

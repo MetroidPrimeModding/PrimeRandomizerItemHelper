@@ -29,7 +29,7 @@ body {
 }
 
 [top-pad] {
-    padding-top: 30px;
+    padding-top: 0px;
 }
 
 item-counter {
@@ -37,22 +37,22 @@ item-counter {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 4px;
-    width: 60px;
-    height: 60px;
+    padding: 2px;
+    width: 41px;
+    height: 41px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 item-counter, item-toggle {
-    transition: 0.3s;
+    /*transition: 0.3s;*/
     transition-property: filter, opacity;
     cursor: pointer;
 }
 
 item-counter[big] {
-    width: 90px;
-    height: 98px;
+    width: 60px;		/*90*/
+    height: 68px;	/*98*/
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -60,9 +60,11 @@ item-counter[big] {
 item-counter [counter], item-toggle {
     user-select: none;
     -webkit-font-smoothing: antialiased;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 1);
     font-family: sans-serif;
-    font-size: 14px;
+	font-weight: normal;
+    font-size: 18px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 4px #000000;
 }
 
 newtab-link {
@@ -80,8 +82,8 @@ newtab-link:hover {
 }
 
 item-counter[count="0"], item-toggle[count="0"] {
-    opacity: 0.35;
-    filter: blur(1px) saturate(20%);
+    opacity: 0.25;
+    filter: /*blur(1px)*/ saturate(50%);
 }
 
 item-toggle {
@@ -99,4 +101,16 @@ item-toggle {
     position: absolute;
     width: 120px;
     height: 120px;
+}
+
+[translator-wrapper] {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+[translator-wrapper] item-counter {
+    position: absolute;
+    width: 45px;
+    height: 45px;
 }

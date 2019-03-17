@@ -1,9 +1,47 @@
 {
-  "name": "PrimeRandoHelper",
+  "name": "prime-rando-helper",
   "description": "A prime randomizer helper",
   "author": "Pwootage",
+  "contributors": [
+    "Pwootage",
+    "Dyceron"
+  ],
+  "repository": "https://github.com/Pwootage/PrimeRandomizerItemHelper",
   "version": "1.0.0",
   "main": "electron/mainForm.js",
   "dependencies": {
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0"
+  },
+  "scripts": {
+    "dist": "yarn dist:win && yarn dist:linux && yarn dist:macOS",
+    "dist:linux": "electron-builder build --linux",
+    "dist:win": "electron-builder build --windows",
+    "dist:macOS": "electron-builder build --mac"
+  },
+  "build": {
+    "appId": "com.pwootage.randomizer.helper",
+    "productName": "Metroid Prime Randomizer Helper",
+    "directories": {
+      "output": "release/"
+    },
+    "win": {
+      "icon": "img",
+      "target": [
+        "nsis", "zip"
+      ]
+    },
+    "mac": {
+      "icon": "img",
+      "target": [
+        "dmg", "zip"
+      ]
+    },
+    "linux": {
+      "icon": "img",
+      "target": [
+        "AppImage", "tar.gz"
+      ]
+    }
   }
 }

@@ -1,3 +1,4 @@
-.idea
+/.idea
 *.iml
-build
+/build
+/node_modules

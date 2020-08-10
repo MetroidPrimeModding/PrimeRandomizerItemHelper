@@ -7,7 +7,7 @@
     "Dyceron"
   ],
   "repository": "https://github.com/Pwootage/PrimeRandomizerItemHelper",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "electron/mainForm.js",
   "devDependencies": {
     "electron": "^9.1.0",

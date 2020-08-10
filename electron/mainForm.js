@@ -150,13 +150,13 @@ function goToFullP(w) {
 /* function goToSimple1(w) {
   w = w || mainWindow;
   w.setSize(400, 511)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime1-full-alt.html');
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1-simple.html');
 } */
 
 function goToCompactP(w) {
   w = w || mainWindow;
   w.setSize(496, 320)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime1-simplified.html');
+  w.loadURL('file://' + __dirname + '/../html/simple-prime1-compact.html');
 }
 
 function goToExpansionsP(w) {
@@ -174,7 +174,7 @@ function goToFullE(w) {
 /* function goToSimplifiedE(w) {
   w = w || mainWindow;
   w.setSize(496, 360)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime2-simplified.html');
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-simple.html');
 }*/
 
 function goToCompactE(w) {

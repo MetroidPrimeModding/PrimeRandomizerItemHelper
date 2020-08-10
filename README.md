@@ -1,4 +1,4 @@
-# PrimeRandomizerItemHelper
+# Prime Randomizer Item Helper
 Useful for keeping track of what you've found/what's left
 
 # Getting Started

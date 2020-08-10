@@ -189,3 +189,15 @@ item-counter[item="suits"][count="1"] {
 item-counter[item="suits"][count="2"] {
     background-image: url("../img/echoes/game/light_suit.png");
 }
+
+item-counter[item="missiles"][count="0"] {
+    background-image: url("../img/echoes/game/missile_launcher.png");
+}
+
+item-counter[item="missiles"][count="1"] {
+    background-image: url("../img/echoes/game/missile_launcher.png");
+}
+
+item-counter[item="missiles"][count="2"] {
+    background-image: url("../img/echoes/game/seeker_launcher.png");
+}

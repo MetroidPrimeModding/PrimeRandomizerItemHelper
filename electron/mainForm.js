@@ -21,22 +21,15 @@ function setupMenu() {
             goToFullP(focusedWindow);
           }
         },
-/*         {
-          label: 'Simple Icons',
-          // accelerator: 'CmdOrCtrl+2',
-          click(item, focusedWindow) {
-            goToSimple1(focusedWindow);
-          }
-		},*/
 		{
-          label: 'Simplified',
+          label: 'Compact',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
-            goToSimplifiedP(focusedWindow);
+            goToCompactP(focusedWindow);
           }
         },
 		{
-          label: 'Simplified + Expansions',
+          label: 'Expansions',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToExpansionsP(focusedWindow);
@@ -54,22 +47,15 @@ function setupMenu() {
             goToFullE(focusedWindow);
           }
         },
-/*         {
-          label: 'Simple Icons',
-          // accelerator: 'CmdOrCtrl+2',
-          click(item, focusedWindow) {
-            goToSimple2(focusedWindow);
-          }
-        }, */
 		{
-          label: 'Simplified',
+          label: 'Compact',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
-            goToSimplifiedE(focusedWindow);
+            goToCompactE(focusedWindow);
           }
         },
 		{
-          label: 'Simplified + Expansions',
+          label: 'Expansions',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToExpansionsE(focusedWindow);
@@ -146,7 +132,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({ width: 400, height: 511, title: "Metroid Prime 1 & 2 Item Tracker" });
+  mainWindow = new BrowserWindow({ width: 496, height: 570, title: "Metroid Prime 1 & 2 Item Tracker" });
   mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -157,7 +143,7 @@ app.on('ready', () => {
 
 function goToFullP(w) {
   w = w || mainWindow;
-  w.setSize(400, 511)
+  w.setSize(496, 570)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
 }
 
@@ -167,38 +153,38 @@ function goToFullP(w) {
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-full-alt.html');
 } */
 
-function goToSimplifiedP(w) {
+function goToCompactP(w) {
   w = w || mainWindow;
-  w.setSize(300, 260)
+  w.setSize(496, 320)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-simplified.html');
 }
 
 function goToExpansionsP(w) {
   w = w || mainWindow;
-  w.setSize(300, 260)
+  w.setSize(496, 360)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-expansions.html');
 }
 
 function goToFullE(w) {
   w = w || mainWindow;
-  w.setSize(336, 435)
+  w.setSize(496, 650)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-full.html');
 }
 
-/* function goToSimple2(w) {
+/* function goToSimplifiedE(w) {
   w = w || mainWindow;
-  w.setSize(336, 435)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime2-full-alt.html');
-} */
-
-function goToSimplifiedE(w) {
-  w = w || mainWindow;
-  w.setSize(300, 290)
+  w.setSize(496, 360)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-simplified.html');
+}*/
+
+function goToCompactE(w) {
+  w = w || mainWindow;
+  w.setSize(496, 360)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-compact.html');
 }
 
 function goToExpansionsE(w) {
   w = w || mainWindow;
-  w.setSize(300, 290)
+  w.setSize(496, 440)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-expansions.html');
 }

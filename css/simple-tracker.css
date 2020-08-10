@@ -38,8 +38,8 @@ item-counter {
     justify-content: flex-end;
     align-items: center;
     padding: 2px;
-    width: 41px;
-    height: 41px;
+    width: 70px;
+    height: 70px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -82,7 +82,7 @@ newtab-link:hover {
 }
 
 item-counter[count="0"], item-toggle[count="0"] {
-    opacity: 0.25;
+    opacity: 0.3;
     filter: /*blur(1px)*/ saturate(50%);
 }
 

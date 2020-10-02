@@ -207,7 +207,7 @@ function goToFullAltE(w) {
 
 function goToCompactE(w) {
   w = w || mainWindow;
-  w.setSize(496, 360)
+  w.setSize(520, 360)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-compact.html');
 }
 
@@ -220,7 +220,7 @@ function goToExpansionsE(w) {
 // Sub-Menu Functions: Corruption
 function goToFullC(w) {
   w = w || mainWindow;
-  w.setSize(380, 528)
+  w.setSize(498, 528)
   w.loadURL('file://' + __dirname + '/../html/simple-prime3-full.html');
 }
 

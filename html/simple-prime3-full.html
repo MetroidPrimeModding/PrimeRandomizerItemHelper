@@ -21,6 +21,7 @@
     </script>
     <script type="text/javascript" src="../libs/webcomponents-lite.js"></script>
     <script type="text/javascript" src="../js/simple-tracker.js"></script>
+    <script type="text/javascript" src="../js/options.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker.css"/>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker-prime3.css"/>
     <title>Corruption Item Tracker</title>
@@ -119,20 +120,22 @@
             </div>
         </div>
 		<div flex-row>
-            <div class="tooltip">
-			    <item-counter item="etank-count" max="14">
+            <div id="expansions">
+                <div class="tooltip">
+                    <item-counter item="etank-count" max="14">
                     <span counter></span></item-counter>
-                <span class="tooltiptext">Energy Tanks</span>
-            </div>
-            <div class="tooltip">
-                <item-counter item="missile-count" max="255" increment="5">
+                    <span class="tooltiptext">Energy Tanks</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="missile-count" max="255" increment="5">
                     <span counter></span></item-counter>
                     <span class="tooltiptext">Missiles</span>
-            </div>
-            <div class="tooltip">
-                <item-counter item="shipmissile-count" max="11">
-                <span counter></span></item-counter>
-                <span class="tooltiptext">Ship Missiles</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="shipmissile-count" max="11">
+                    <span counter></span></item-counter>
+                    <span class="tooltiptext">Ship Missiles</span>
+                </div>
             </div>
             <div class="tooltip">
 			    <item-counter item="ecell-count" max="9">
@@ -141,6 +144,7 @@
             </div>
         </div>
     </div>
+    <button class=button onclick="showExpansions()">Toggle Expansions</button>
 </div>
 </body>
 </html>

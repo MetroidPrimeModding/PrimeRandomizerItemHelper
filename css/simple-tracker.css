@@ -7,7 +7,7 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -121,7 +121,7 @@ item-toggle {
     border-bottom: 1px dotted black;
   }
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #555;
@@ -136,9 +136,10 @@ item-toggle {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 1s;
-  }
+    transition-delay: 2s;
+}
   
-  .tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -147,9 +148,22 @@ item-toggle {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
   }

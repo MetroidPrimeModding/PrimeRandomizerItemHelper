@@ -62,9 +62,9 @@ item-counter [counter], item-toggle {
     -webkit-font-smoothing: antialiased;
     color: rgba(255, 255, 255, 1);
     font-family: sans-serif;
-	font-weight: normal;
-    font-size: 18px;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 4px #000000;
+	font-weight: bold;
+    font-size: 24px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black, 2px 2px 4px #000000;
 }
 
 newtab-link {

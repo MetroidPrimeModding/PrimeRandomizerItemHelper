@@ -21,23 +21,23 @@ function setupMenu() {
             goToFullP(focusedWindow);
           }
         },
-		{
+		    {
           label: 'Compact',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToCompactP(focusedWindow);
           }
         },
-		{
+		    /*{
           label: 'Expansions',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToExpansionsP(focusedWindow);
           }
-        }
+        }*/
       ]
     },
-	{
+	  {
       label: 'Echoes',
       submenu: [
         {
@@ -47,20 +47,46 @@ function setupMenu() {
             goToFullE(focusedWindow);
           }
         },
-		{
+		    {
           label: 'Compact',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToCompactE(focusedWindow);
           }
         },
-		{
+		    /*{
           label: 'Expansions',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToExpansionsE(focusedWindow);
           }
+        },*/
+		    {
+          label: 'Alt',
+          // accelerator: 'CmdOrCtrl+1',
+          click(item, focusedWindow) {
+            goToFullAltE(focusedWindow);
+          }
         }
+      ]
+    },
+    {
+      label: 'Corruption',
+      submenu: [
+        {
+          label: 'Full',
+          // accelerator: 'CmdOrCtrl+1',
+          click(item, focusedWindow) {
+            goToFullC(focusedWindow);
+          }
+        },
+		    /*{
+          label: 'Compact',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToCompactC(focusedWindow);
+          }
+        },*/
       ]
     },
     {
@@ -132,7 +158,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({ width: 496, height: 570, title: "Metroid Prime 1 & 2 Item Tracker" });
+  mainWindow = new BrowserWindow({ width: 496, height: 580, title: "Metroid Prime Series Item Tracker" });
   mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -141,21 +167,22 @@ app.on('ready', () => {
   setupMenu();
 });
 
+// Sub-Menu Functions: Prime
 function goToFullP(w) {
   w = w || mainWindow;
-  w.setSize(496, 570)
+  w.setSize(496, 580)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
 }
 
-/* function goToSimple1(w) {
+function goToSimple1(w) {
   w = w || mainWindow;
   w.setSize(400, 511)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-simple.html');
-} */
+}
 
 function goToCompactP(w) {
   w = w || mainWindow;
-  w.setSize(496, 320)
+  w.setSize(496, 360)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-compact.html');
 }
 
@@ -165,17 +192,18 @@ function goToExpansionsP(w) {
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-expansions.html');
 }
 
+// Sub-Menu Functions: Echoes
 function goToFullE(w) {
   w = w || mainWindow;
-  w.setSize(496, 650)
+  w.setSize(496, 520)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-full.html');
 }
 
-/* function goToSimplifiedE(w) {
+function goToFullAltE(w) {
   w = w || mainWindow;
-  w.setSize(496, 360)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime2-simple.html');
-}*/
+  w.setSize(496, 440)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime2-full-alt.html');
+}
 
 function goToCompactE(w) {
   w = w || mainWindow;
@@ -187,4 +215,17 @@ function goToExpansionsE(w) {
   w = w || mainWindow;
   w.setSize(496, 440)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-expansions.html');
+}
+
+// Sub-Menu Functions: Corruption
+function goToFullC(w) {
+  w = w || mainWindow;
+  w.setSize(496, 528)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime3-full.html');
+}
+
+function goToCompactC(w) {
+  w = w || mainWindow;
+  w.setSize(482, 528)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime3-compact.html');
 }

@@ -7,7 +7,7 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,14 +45,14 @@ item-counter {
 }
 
 item-counter, item-toggle {
-    /*transition: 0.3s;*/
+    transition: 0.3s;
     transition-property: filter, opacity;
     cursor: pointer;
 }
 
 item-counter[big] {
-    width: 60px;		/*90*/
-    height: 68px;	/*98*/
+    width: 60px;
+    height: 68px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -62,9 +62,9 @@ item-counter [counter], item-toggle {
     -webkit-font-smoothing: antialiased;
     color: rgba(255, 255, 255, 1);
     font-family: sans-serif;
-	font-weight: normal;
-    font-size: 18px;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 4px #000000;
+	font-weight: bold;
+    font-size: 24px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black, 2px 2px 4px #000000;
 }
 
 newtab-link {
@@ -82,8 +82,8 @@ newtab-link:hover {
 }
 
 item-counter[count="0"], item-toggle[count="0"] {
-    opacity: 0.3;
-    filter: /*blur(1px)*/ saturate(50%);
+    opacity: 0.5;
+    filter: saturate(25%);
 }
 
 item-toggle {
@@ -114,3 +114,57 @@ item-toggle {
     width: 45px;
     height: 45px;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(85, 85, 85);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5%;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+}
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }

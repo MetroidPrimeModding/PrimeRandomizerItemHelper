@@ -106,6 +106,10 @@ item-counter[item="seeker-missiles"] {
     background-image: url("../img/echoes/game/seeker_launcher.png");
 }
 
+item-counter[item="charge-beam"] {
+    background-image: url("../img/echoes/game/charge_beam.png");
+}
+
 item-counter[item="dark-beam"] {
     background-image: url("../img/echoes/game/dark_beam.png");
 }

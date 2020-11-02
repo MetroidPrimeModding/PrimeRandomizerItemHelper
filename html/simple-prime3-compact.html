@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-53207226-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="../libs/webcomponents-lite.js"></script>
+    <script type="text/javascript" src="../js/simple-tracker.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/simple-tracker.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/simple-tracker-prime3.css"/>
+    <title>Corruption Item Tracker</title>
+</head>
+<body>
+    <div center>
+        <div flex-column>
+            <div flex-row>
+                <div class="tooltip">
+                    <item-counter item="boost"></item-counter>
+                    <span class="tooltiptext">Boost Ball</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="screw-attack"></item-counter>
+                    <span class="tooltiptext">Screw Attack</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="spider"></item-counter>
+                    <span class="tooltiptext">Spider Ball</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="hyper-ball"></item-counter>
+                    <span class="tooltiptext">Hyper Ball</span>
+                </div>
+            </div>
+            <div flex-row>
+                <div class="tooltip">
+                    <item-counter item="missiles" max="3"></item-counter>
+                    <span class="tooltiptext">Missile Launcher<br/>Ice Missile<br/>Seeker Missile</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="hyper-missile"></item-counter>
+                    <span class="tooltiptext">Hyper Missile</span>
+                </div>
+            </div>
+            <div flex-row>
+                <div class="tooltip">
+                    <item-counter item="grapple-lasso"></item-counter>
+                    <span class="tooltiptext">Grapple Lasso</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="grapple-swing"></item-counter>
+                    <span class="tooltiptext">Grapple Swing</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="grapple-voltage"></item-counter>
+                    <span class="tooltiptext">Grapple Voltage</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="hyper-grapple"></item-counter>
+                    <span class="tooltiptext">Hyper Grapple</span>
+                </div>
+            </div>
+            <div flex-row>
+                <div class="tooltip">
+                    <item-counter item="hyper"></item-counter>
+                    <span class="tooltiptext">Hypermode/PED</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="plasma-beam"></item-counter>
+                    <span class="tooltiptext">Plasma Beam</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="nova-beam"></item-counter>
+                    <span class="tooltiptext">Nova Beam</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="ship-grapple"></item-counter>
+                    <span class="tooltiptext">Ship Grapple</span>
+                </div>
+            </div>
+            <div flex-row>
+                <div class="tooltip">
+                    <item-counter item="hazard-shield"></item-counter>
+                    <span class="tooltiptext">Hazard Shield</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="command-visor"></item-counter>
+                    <span class="tooltiptext">Command Visor</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="xray-visor"></item-counter>
+                    <span class="tooltiptext">X-Ray Visor</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="ship-missile"></item-counter>
+                    <span class="tooltiptext">Ship Missile</span>
+                </div>
+            </div>
+            <div flex-row>
+                <div id="expansions">
+                    <div class="tooltip">
+                        <item-counter item="etank-count" max="14">
+                        <span counter></span></item-counter>
+                        <span class="tooltiptext">Energy Tanks</span>
+                    </div>
+                    <div class="tooltip">
+                        <item-counter item="missile-count" max="255" increment="5">
+                        <span counter></span></item-counter>
+                        <span class="tooltiptext">Missiles</span>
+                    </div>
+                    <div class="tooltip">
+                        <item-counter item="shipmissile-count" max="11">
+                        <span counter></span></item-counter>
+                        <span class="tooltiptext">Ship Missiles</span>
+                    </div>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="ecell-count" max="9">
+                    <span counter></span></item-counter>
+                    <span class="tooltiptext">Energy Cells</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

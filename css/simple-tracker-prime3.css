@@ -1,7 +1,3 @@
-/*item-counter[translator][count="0"] {
-    filter: blur(1px) saturate(20%) hue-rotate(170deg);
-}*/
-
 item-counter[item="missile-count"][count="0"] [counter] {
     opacity: 0;
 }

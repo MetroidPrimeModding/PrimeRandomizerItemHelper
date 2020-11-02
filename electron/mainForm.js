@@ -28,13 +28,13 @@ function setupMenu() {
             goToCompactP(focusedWindow);
           }
         },
-		    {
+		    /*{
           label: 'Expansions',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToExpansionsP(focusedWindow);
           }
-        }
+        }*/
       ]
     },
 	  {
@@ -54,15 +54,15 @@ function setupMenu() {
             goToCompactE(focusedWindow);
           }
         },
-		    {
+		    /*{
           label: 'Expansions',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToExpansionsE(focusedWindow);
           }
-        },
+        },*/
 		    {
-          label: 'Full Alt',
+          label: 'Alt',
           // accelerator: 'CmdOrCtrl+1',
           click(item, focusedWindow) {
             goToFullAltE(focusedWindow);
@@ -80,13 +80,13 @@ function setupMenu() {
             goToFullC(focusedWindow);
           }
         },
-		    {
+		    /*{
           label: 'Compact',
           // accelerator: 'CmdOrCtrl+2',
           click(item, focusedWindow) {
             goToCompactC(focusedWindow);
           }
-        },
+        },*/
       ]
     },
     {
@@ -158,7 +158,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({ width: 496, height: 570, title: "Metroid Prime 1 & 2 Item Tracker" });
+  mainWindow = new BrowserWindow({ width: 496, height: 580, title: "Metroid Prime Series Item Tracker" });
   mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -170,19 +170,19 @@ app.on('ready', () => {
 // Sub-Menu Functions: Prime
 function goToFullP(w) {
   w = w || mainWindow;
-  w.setSize(496, 570)
+  w.setSize(496, 580)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
 }
 
-/* function goToSimple1(w) {
+function goToSimple1(w) {
   w = w || mainWindow;
   w.setSize(400, 511)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-simple.html');
-} */
+}
 
 function goToCompactP(w) {
   w = w || mainWindow;
-  w.setSize(496, 320)
+  w.setSize(496, 360)
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-compact.html');
 }
 
@@ -195,19 +195,19 @@ function goToExpansionsP(w) {
 // Sub-Menu Functions: Echoes
 function goToFullE(w) {
   w = w || mainWindow;
-  w.setSize(496, 650)
+  w.setSize(496, 520)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-full.html');
 }
 
 function goToFullAltE(w) {
   w = w || mainWindow;
-  w.setSize(496, 570)
+  w.setSize(496, 440)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-full-alt.html');
 }
 
 function goToCompactE(w) {
   w = w || mainWindow;
-  w.setSize(520, 360)
+  w.setSize(496, 360)
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-compact.html');
 }
 
@@ -220,7 +220,7 @@ function goToExpansionsE(w) {
 // Sub-Menu Functions: Corruption
 function goToFullC(w) {
   w = w || mainWindow;
-  w.setSize(498, 528)
+  w.setSize(496, 528)
   w.loadURL('file://' + __dirname + '/../html/simple-prime3-full.html');
 }
 

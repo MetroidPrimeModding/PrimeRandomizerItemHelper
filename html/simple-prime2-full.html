@@ -21,6 +21,7 @@
     </script>
     <script type="text/javascript" src="../libs/webcomponents-lite.js"></script>
     <script type="text/javascript" src="../js/simple-tracker.js"></script>
+    <script type="text/javascript" src="../js/options.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker.css"/>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker-prime2-game.css"/>
     <title>Echoes Item Tracker</title>
@@ -28,62 +29,157 @@
 <body>
 <div center>
     <div flex-column>
-		<div flex-row>
-			<item-counter item="bombs"></item-counter>
-			<item-counter item="boost"></item-counter>
-			<item-counter item="spider"></item-counter>
-            <item-counter item="power-bombs"max="10">
-                <span counter></span></item-counter>
-		</div>
         <div flex-row>
-			<item-counter item="missile" max="255" increment="5">
+		    <div class="tooltip">
+                <item-counter item="missile" max="255" increment="5">
                 <span counter></span></item-counter>
-			<item-counter item="super-missile"></item-counter>
-			<item-counter item="seeker-missiles"></item-counter>
+                <span class="tooltiptext">Missiles</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="seeker-missiles"></item-counter>
+                <span class="tooltiptext">Seeker Launcher</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="bombs"></item-counter>
+                <span class="tooltiptext">Morph Ball Bomb</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="boost"></item-counter>
+                <span class="tooltiptext">Boost Ball</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="spider"></item-counter>
+                <span class="tooltiptext">Spider Ball</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="power-bombs" max="10">
+                <span counter></span></item-counter>
+                <span class="tooltiptext">Power Bomb</span>
+            </div>
         </div>
-        <div flex-row>			
-			<item-counter item="space-jump"></item-counter>
-			<item-counter item="gravity-boost"></item-counter>
-			<item-counter item="grapple"></item-counter>
-            <item-counter item="screw-attack"></item-counter>
+		<div flex-row>
+            <div class="tooltip">
+                <item-counter item="charge-beam"></item-counter>
+                <span class="tooltiptext">Charge Beam</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="dark-beam"></item-counter>
+                <span class="tooltiptext">Dark Beam</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="light-beam"></item-counter>
+                <span class="tooltiptext">Light Beam</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="anni-beam"></item-counter>
+                <span class="tooltiptext">Annihilator Beam</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="dark-suit"></item-counter>
+                <span class="tooltiptext">Dark Suit</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="dark-visor"></item-counter>
+                <span class="tooltiptext">Dark Visor</span>
+            </div>
+		</div>
+        <div flex-row>
+			<div class="tooltip">
+                <item-counter item="super-missile"></item-counter>
+                <span class="tooltiptext">Super Missile</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="dark-burst"></item-counter>
+                <span class="tooltiptext">Darkburst</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="sunburst"></item-counter>
+                <span class="tooltiptext">Sunburst</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="sonic-boom"></item-counter>
+                <span class="tooltiptext">Sonic Boom</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="light-suit"></item-counter>
+                <span class="tooltiptext">Light Suit</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="echo-visor"></item-counter>
+                <span class="tooltiptext">Echo Visor</span>
+            </div>
         </div>
         <div flex-row>
-			<item-counter item="dark-beam"></item-counter>
-			<item-counter item="light-beam"></item-counter>
-            <item-counter item="anni-beam"></item-counter>
-		</div>
-		<div flex-row>
-			<item-counter item="dark-suit"></item-counter>
-			<item-counter item="light-suit"></item-counter>
-			<item-counter item="dark-visor"></item-counter>
-			<item-counter item="echo-visor"></item-counter>
-			</div>
-		<div flex-row>
-			<item-counter big item="etank-count" max="14">
-                <span counter></span></item-counter>
-			<item-counter big item="ammo-upgrade" max="200" increment="50">
-                <span counter></span></item-counter>
-			<item-counter item="dark-burst"></item-counter>
-			<item-counter item="sunburst"></item-counter>
-			<item-counter item="sonic-boom"></item-counter>
+			<div class="tooltip">
+                <item-counter item="space-jump"></item-counter>
+                <span class="tooltiptext">Space Jump Boots</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="gravity-boost"></item-counter>
+                <span class="tooltiptext">Gravity Boost</span>
+            </div>
+			<div class="tooltip">
+                <item-counter item="grapple"></item-counter>
+                <span class="tooltiptext">Grapple Beam</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="screw-attack"></item-counter>
+                <span class="tooltiptext">Screw Attack</span>
+            </div>
+            <div id=expansions flex-row>
+                <div class="tooltip">
+                    <item-counter item="etank-count" max="14">
+                    <span counter></span></item-counter>
+                    <span class="tooltiptext">Energy Tanks</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="ammo-upgrade" max="200" increment="50">
+                    <span counter></span></item-counter>
+                    <span class="tooltiptext">Beam Ammo</span>
+                </div>
+            </div>
         </div>
         <div flex-row>
-			<item-counter translator item="violet-translator"></item-counter>
-            <item-counter translator item="amber-translator"></item-counter>
-            <item-counter translator item="emerald-translator"></item-counter>
-            <item-counter translator item="cobalt-translator"></item-counter>
-		</div>
+            <div class="tooltip">
+                <item-counter item="violet-translator"></item-counter>
+                <span class="tooltiptext">Violet Translator</span>
+            </div>>
+            <div class="tooltip">
+                <item-counter item="amber-translator"></item-counter>
+                <span class="tooltiptext">Amber Translator</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="emerald-translator"></item-counter>
+                <span class="tooltiptext">Emerald Translator</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="cobalt-translator"></item-counter>
+                <span class="tooltiptext">Cobalt Translator</span>
+            </div>
+        </div>
         <div flex-row>
-			<item-counter big item="sky-key" max="9">
+            <div class="tooltip">
+			    <item-counter item="sky-key" max="9">
                 <span counter></span></item-counter>
-			<item-counter big item="agon-key" max="3">
+                <span class="tooltiptext">Sky Temple Keys</span>
+            </div>
+            <div class="tooltip">
+			    <item-counter item="agon-key" max="3">
                 <span counter></span></item-counter>
-            <item-counter big item="torvus-key" max="3">
+                <span class="tooltiptext">Agon Keys</span>
+            </div>
+            <div class="tooltip">
+                <item-counter item="torvus-key" max="3">
+                <span counter></span></item-counter>	
+                <span class="tooltiptext">Torvus Keys</span>
+            </div>
+            <div class="tooltip">
+			    <item-counter item="ing-key" max="3">
                 <span counter></span></item-counter>
-            <item-counter big item="ing-key" max="3">
-                <span counter></span></item-counter>
-            
+                <span class="tooltiptext">Ing Hive Keys</span>
+            </div>
 		</div>
+        <!-- <button class=button onclick="showExpansions()">Toggle Expansions</button> -->
     </div>
 </div>
 </body>

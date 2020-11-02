@@ -45,14 +45,14 @@ item-counter {
 }
 
 item-counter, item-toggle {
-    /*transition: 0.3s;*/
+    transition: 0.3s;
     transition-property: filter, opacity;
     cursor: pointer;
 }
 
 item-counter[big] {
-    width: 60px;		/*90*/
-    height: 68px;	/*98*/
+    width: 60px;
+    height: 68px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -82,8 +82,8 @@ newtab-link:hover {
 }
 
 item-counter[count="0"], item-toggle[count="0"] {
-    opacity: 0.3;
-    filter: /*blur(1px)*/ saturate(50%);
+    opacity: 0.5;
+    filter: saturate(25%);
 }
 
 item-toggle {
@@ -124,19 +124,19 @@ item-toggle {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: #555;
+    background-color: rgb(85, 85, 85);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5%;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 100%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 1s;
-    transition-delay: 2s;
+    transition-delay: 1s;
 }
   
 .tooltip .tooltiptext::after {
@@ -159,11 +159,12 @@ item-toggle {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 8px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 50px;
   }

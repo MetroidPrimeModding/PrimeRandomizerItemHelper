@@ -80,13 +80,6 @@ function setupMenu() {
             goToFullC(focusedWindow);
           }
         },
-		    /*{
-          label: 'Compact',
-          // accelerator: 'CmdOrCtrl+2',
-          click(item, focusedWindow) {
-            goToCompactC(focusedWindow);
-          }
-        },*/
 		    {
           label: 'No Expansions',
           // accelerator: 'CmdOrCtrl+2',

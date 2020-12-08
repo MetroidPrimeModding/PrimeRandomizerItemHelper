@@ -23,19 +23,18 @@
     <script type="text/javascript" src="../js/simple-tracker.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker.css"/>
     <link type="text/css" rel="stylesheet" href="../css/simple-tracker-prime3.css"/>
-    <title>Corruption Item Tracker</title>
 </head>
 <body>
     <div center>
         <div flex-column>
             <div flex-row>
                 <div class="tooltip">
-                    <item-counter item="boost"></item-counter>
-                    <span class="tooltiptext">Boost Ball</span>
+                    <item-counter item="bombs"></item-counter>
+                    <span class="tooltiptext">Morph Ball Bomb</span>
                 </div>
                 <div class="tooltip">
-                    <item-counter item="screw-attack"></item-counter>
-                    <span class="tooltiptext">Screw Attack</span>
+                    <item-counter item="boost"></item-counter>
+                    <span class="tooltiptext">Boost Ball</span>
                 </div>
                 <div class="tooltip">
                     <item-counter item="spider"></item-counter>
@@ -48,8 +47,16 @@
             </div>
             <div flex-row>
                 <div class="tooltip">
-                    <item-counter item="missiles" max="3"></item-counter>
-                    <span class="tooltiptext">Missile Launcher<br/>Ice Missile<br/>Seeker Missile</span>
+                    <item-counter item="spider"></item-counter>
+                    <span class="tooltiptext">Spider Ball</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="missile"></item-counter>
+                    <span class="tooltiptext">Missile Launcher</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="missiles" max="2"></item-counter>
+                    <span class="tooltiptext">Ice Missile<br/>Seeker Missile</span>
                 </div>
                 <div class="tooltip">
                     <item-counter item="hyper-missile"></item-counter>
@@ -76,26 +83,30 @@
             </div>
             <div flex-row>
                 <div class="tooltip">
+                    <item-counter item="charge"></item-counter>
+                    <span class="tooltiptext">Charge Beam</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="beams" max="2"></item-counter>
+                    <span class="tooltiptext">Plasma Beam<br/>Nova Beam</span>
+                </div>
+                <div class="tooltip">
                     <item-counter item="hyper"></item-counter>
-                    <span class="tooltiptext">Hypermode/PED</span>
+                    <span class="tooltiptext">Hypermode</span>
                 </div>
                 <div class="tooltip">
-                    <item-counter item="plasma-beam"></item-counter>
-                    <span class="tooltiptext">Plasma Beam</span>
-                </div>
-                <div class="tooltip">
-                    <item-counter item="nova-beam"></item-counter>
-                    <span class="tooltiptext">Nova Beam</span>
-                </div>
-                <div class="tooltip">
-                    <item-counter item="ship-grapple"></item-counter>
-                    <span class="tooltiptext">Ship Grapple</span>
+                    <item-counter item="ship-missile"></item-counter>
+                    <span class="tooltiptext">Ship Missile</span>
                 </div>
             </div>
             <div flex-row>
                 <div class="tooltip">
-                    <item-counter item="hazard-shield"></item-counter>
-                    <span class="tooltiptext">Hazard Shield</span>
+                    <item-counter item="space-jump"></item-counter>
+                    <span class="tooltiptext">Space Jump Boots</span>
+                </div>
+                <div class="tooltip">
+                    <item-counter item="screw-attack"></item-counter>
+                    <span class="tooltiptext">Screw Attack</span>
                 </div>
                 <div class="tooltip">
                     <item-counter item="command-visor"></item-counter>
@@ -105,28 +116,19 @@
                     <item-counter item="xray-visor"></item-counter>
                     <span class="tooltiptext">X-Ray Visor</span>
                 </div>
+            </div>
+            <div flex-row>
+                <div class="tooltip">
+                    <item-counter item="hazard-shield"></item-counter>
+                    <span class="tooltiptext">Hazard Shield</span>
+                </div>
                 <div class="tooltip">
                     <item-counter item="ship-missile"></item-counter>
                     <span class="tooltiptext">Ship Missile</span>
                 </div>
-            </div>
-            <div flex-row>
-                <div id="expansions">
-                    <div class="tooltip">
-                        <item-counter item="etank-count" max="14">
-                        <span counter></span></item-counter>
-                        <span class="tooltiptext">Energy Tanks</span>
-                    </div>
-                    <div class="tooltip">
-                        <item-counter item="missile-count" max="255" increment="5">
-                        <span counter></span></item-counter>
-                        <span class="tooltiptext">Missiles</span>
-                    </div>
-                    <div class="tooltip">
-                        <item-counter item="shipmissile-count" max="11">
-                        <span counter></span></item-counter>
-                        <span class="tooltiptext">Ship Missiles</span>
-                    </div>
+                <div class="tooltip">
+                    <item-counter item="ship-grapple"></item-counter>
+                    <span class="tooltiptext">Ship Grapple</span>
                 </div>
                 <div class="tooltip">
                     <item-counter item="ecell-count" max="9">

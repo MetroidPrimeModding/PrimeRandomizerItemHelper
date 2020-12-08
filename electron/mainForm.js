@@ -62,7 +62,7 @@ function setupMenu() {
           }
         },*/
 		    {
-          label: 'Alt',
+          label: 'No Expansions',
           // accelerator: 'CmdOrCtrl+1',
           click(item, focusedWindow) {
             goToFullAltE(focusedWindow);
@@ -74,7 +74,7 @@ function setupMenu() {
       label: 'Corruption',
       submenu: [
         {
-          label: 'Full',
+          label: 'Standard',
           // accelerator: 'CmdOrCtrl+1',
           click(item, focusedWindow) {
             goToFullC(focusedWindow);
@@ -87,6 +87,13 @@ function setupMenu() {
             goToCompactC(focusedWindow);
           }
         },*/
+		    {
+          label: 'No Expansions',
+          // accelerator: 'CmdOrCtrl+2',
+          click(item, focusedWindow) {
+            goToAltC(focusedWindow);
+          }
+        },
       ]
     },
     {
@@ -158,7 +165,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({ width: 496, height: 580, title: "Metroid Prime Series Item Tracker" });
+  mainWindow = new BrowserWindow({ width: 496, height: 580, title: "Metroid Prime Trilogy Item Tracker" });
   mainWindow.loadURL('file://' + __dirname + '/../html/simple-prime1-full.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -220,12 +227,18 @@ function goToExpansionsE(w) {
 // Sub-Menu Functions: Corruption
 function goToFullC(w) {
   w = w || mainWindow;
-  w.setSize(496, 528)
+  w.setSize(400, 528)
   w.loadURL('file://' + __dirname + '/../html/simple-prime3-full.html');
 }
 
 function goToCompactC(w) {
   w = w || mainWindow;
-  w.setSize(482, 528)
+  w.setSize(400, 528)
   w.loadURL('file://' + __dirname + '/../html/simple-prime3-compact.html');
+}
+
+function goToAltC(w) {
+  w = w || mainWindow;
+  w.setSize(400, 528)
+  w.loadURL('file://' + __dirname + '/../html/simple-prime3-alt.html');
 }

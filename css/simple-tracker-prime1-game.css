@@ -82,6 +82,10 @@ item-counter[item="phazon"] {
     background-image: url("../img/prime/game/phazon_suit.png");
 }
 
+item-counter[item="scan"] {
+    background-image: url("../img/prime/game/scan_visor.png");
+}
+
 item-counter[item="thermal"] {
     background-image: url("../img/prime/game/thermal_visor.png");
 }

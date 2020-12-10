@@ -27,14 +27,7 @@ function setupMenu() {
           click(item, focusedWindow) {
             goToCompactP(focusedWindow);
           }
-        },
-		    /*{
-          label: 'Expansions',
-          // accelerator: 'CmdOrCtrl+2',
-          click(item, focusedWindow) {
-            goToExpansionsP(focusedWindow);
-          }
-        }*/
+        }
       ]
     },
 	  {
@@ -54,13 +47,6 @@ function setupMenu() {
             goToCompactE(focusedWindow);
           }
         },
-		    /*{
-          label: 'Expansions',
-          // accelerator: 'CmdOrCtrl+2',
-          click(item, focusedWindow) {
-            goToExpansionsE(focusedWindow);
-          }
-        },*/
 		    {
           label: 'No Expansions',
           // accelerator: 'CmdOrCtrl+1',
@@ -80,13 +66,6 @@ function setupMenu() {
             goToFullC(focusedWindow);
           }
         },
-		    /*{
-          label: 'Compact',
-          // accelerator: 'CmdOrCtrl+2',
-          click(item, focusedWindow) {
-            goToCompactC(focusedWindow);
-          }
-        },*/
 		    {
           label: 'No Expansions',
           // accelerator: 'CmdOrCtrl+2',
@@ -193,12 +172,6 @@ function goToCompactP(w) {
   w.loadURL('file://' + __dirname + '/../html/simple-prime1-compact.html');
 }
 
-function goToExpansionsP(w) {
-  w = w || mainWindow;
-  w.setSize(496, 360)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime1-expansions.html');
-}
-
 // Sub-Menu Functions: Echoes
 function goToFullE(w) {
   w = w || mainWindow;
@@ -218,23 +191,11 @@ function goToCompactE(w) {
   w.loadURL('file://' + __dirname + '/../html/simple-prime2-compact.html');
 }
 
-function goToExpansionsE(w) {
-  w = w || mainWindow;
-  w.setSize(496, 440)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime2-expansions.html');
-}
-
 // Sub-Menu Functions: Corruption
 function goToFullC(w) {
   w = w || mainWindow;
   w.setSize(400, 528)
   w.loadURL('file://' + __dirname + '/../html/simple-prime3-full.html');
-}
-
-function goToCompactC(w) {
-  w = w || mainWindow;
-  w.setSize(400, 528)
-  w.loadURL('file://' + __dirname + '/../html/simple-prime3-compact.html');
 }
 
 function goToAltC(w) {
